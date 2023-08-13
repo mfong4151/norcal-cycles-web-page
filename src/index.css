@@ -1,6 +1,5 @@
 :root{
   --default-black: #000000;
-
 }
 
 body {
@@ -49,3 +48,8 @@ code {
 .fdc{
   flex-direction: column;
 }
+
+.cursor-events:hover{
+  cursor: pointer;
+}
+
