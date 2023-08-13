@@ -1,11 +1,12 @@
 import React from 'react'
-
-const NorCalFooter = () => {
+import norCalBanner from  '../../assets/norcal_cylces_banner.jpg'
+import './NorCalHeader.css'
+const NorCalHeader = () => {
   return (
-    <div>
-      
-    </div>
+    <header className='udc'>
+        <img src={norCalBanner} alt="" className="banner" />
+    </header>
   )
 }
 
-export default NorCalFooter
+export default NorCalHeader

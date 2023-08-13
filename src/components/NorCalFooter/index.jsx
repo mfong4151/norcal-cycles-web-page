@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NorCalHeader = () => {
+const NorCalFooter = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const NorCalHeader = () => {
   )
 }
 
-export default NorCalHeader
+export default NorCalFooter

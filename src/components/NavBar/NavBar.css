@@ -16,15 +16,15 @@ nav {
     padding: 0;
   }
   
-  li {
+  nav > ul > li {
     margin: 0 1rem;
   }
   
-  li:first-child {
+  nav > ul > li:first-child {
     margin-left: 0;
   }
   
-  a {
+  nav > ul > li> a {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
@@ -32,11 +32,11 @@ nav {
     transition: background-color 0.3s ease;
   }
   
-  a:hover {
+  nav > ul > li> a:hover {
     background-color: #ddd;
   }
   
-  a.active {
+  nav > ul > li> a.active {
     background-color: #ccc;
   }
   

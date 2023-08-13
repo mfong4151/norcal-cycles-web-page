@@ -7,10 +7,12 @@ import Rentals from './components/Rentals';
 import Service from './components/Service';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar'
+import NorCalHeader from './components/NorCalHeader';
 
 const App = () => {
   return (
       <BrowserRouter>
+        <NorCalHeader/>
         <NavBar/>
 
         <Routes>
