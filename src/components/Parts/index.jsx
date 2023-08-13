@@ -2,8 +2,8 @@
   
   const Parts = () => {
     return (
-      <div>
-        
+      <div className='margin-default'>
+        <h1>Parts</h1>
       </div>
     )
   }

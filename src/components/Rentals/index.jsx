@@ -2,7 +2,7 @@ import React from 'react'
 
 const Rentals = () => {
   return (
-    <div className='udc fdc'>
+    <div className='margin-default'>
       <h1>Rentals</h1>
       <div>
         <p>Nor-Cal Cycles offers a variety of motorcycles for rent.</p>

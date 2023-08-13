@@ -3,7 +3,7 @@ import './ContactUs.css'
 
 const ContactUs = () => {
   return (
-    <div className='udc-left fdc'>
+    <div id='page-main' className='margin-default'>
       <h1>Contact Us</h1>
       <ul className='udc-left fdc'>
         <li>Phone: 650-872-2354</li>

@@ -2,7 +2,8 @@ import React from 'react'
 
 const Copywrite = () => {
   return (
-    <div className="text udc fdc">
+    <div className="margin-default">
+        <h1>About Nor-Cal Cycles:</h1>
         <p>The One-Stop Motorcycle Dealer serving the San Francisco Bay Area & Beyond.</p>
 
          <p>As a team of motorcycle enthusiasts, we provide:</p>
