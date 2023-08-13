@@ -1,24 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
-import Inventory from './components/inventory';
+import Inventory from './components/Inventory';
 import Parts from './components/Parts';
 import Rentals from './components/Rentals';
 import Service from './components/Service';
 import Splash from './components/Splash';
+import NavBar from './components/NavBar'
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={Splash} />
-        <Route path="/contact-us" component={ContactUs} />
-        <Route path="/inventory" component={Inventory} />
-        <Route path="/parts" component={Parts} />
-        <Route path="/rentals" component={Rentals} />
-        <Route path="/service" component={Service} />
-      </Switch>
-    </Router>
+      <BrowserRouter>
+        <NavBar/>
+
+        <Routes>
+          <Route path="/" exact element={<Splash/>} />
+          <Route path="/contact-us" element={<ContactUs/>} />
+          <Route path="/inventory" element={<Inventory/>} />
+          <Route path="/parts" element={<Parts/>} />
+          <Route path="/rentals" element={<Rentals/>} />
+          <Route path="/service" element={<Service/>} />
+        </Routes>
+      </BrowserRouter>
   );
 };
 

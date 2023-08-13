@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Rentals = () => {
+const NorCalHeader = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Rentals = () => {
   )
 }
 
-export default Rentals
+export default NorCalHeader
