@@ -2,7 +2,7 @@
   
   const Parts = () => {
     return (
-      <div className='margin-default'>
+      <div className='padding-default'>
         <h1>Parts</h1>
       </div>
     )

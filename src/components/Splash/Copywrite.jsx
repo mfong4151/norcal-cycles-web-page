@@ -2,13 +2,13 @@ import React from 'react'
 
 const Copywrite = () => {
   return (
-    <div className="margin-default">
+    <div className="padding-default">
         <h1>About Nor-Cal Cycles:</h1>
         <p>The One-Stop Motorcycle Dealer serving the San Francisco Bay Area & Beyond.</p>
 
          <p>As a team of motorcycle enthusiasts, we provide:</p>
 
-            <ul className='udc-left fdc'>
+            <ul className='udc-left fdc page-list'>
                 <li>-Used Motorcycle Sales</li>
                 <li>-Helmets, Gloves & Apparel</li>
                 <li>-NEW O.E.M. & Aftermarket Parts</li>

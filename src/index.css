@@ -1,5 +1,6 @@
 :root{
   --default-black: #000000;
+  --default-text-white: #ffffff;
   --font-family: sans-serif
 }
 
@@ -55,18 +56,34 @@ code {
 }
 
 
+.padding-default{
+  padding-top:4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .margin-default{
-  margin-left: 4rem;
-  margin-right: 4rem;
+  padding-top:4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
-
-p{
-  font-family:var(--font-family);
-  font-weight:400;
+h1,
+h2{
+  color:var(--default-text-white);
 }
 
+p,
 .page-list > * {
   font-family: var(--font-family);
   font-weight:400;
+  color: var(--default-text-white);
+}
+
+
+
+#page-main{
+  min-width: 100vw;
+  min-height:100vw;
+  background-color: var(--default-black);
 }

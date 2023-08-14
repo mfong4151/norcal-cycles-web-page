@@ -14,7 +14,6 @@ const App = () => {
       <BrowserRouter>
         <NorCalHeader/>
         <NavBar/>
-
         <Routes>
           <Route path="/" exact element={<Splash/>} />
           <Route path="/contact-us" element={<ContactUs/>} />

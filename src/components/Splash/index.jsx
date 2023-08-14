@@ -6,7 +6,7 @@ const Splash = () => {
   //Use a useEffect with a set interval to navigate between gallery options,  include a cleanup function
   // Create a bunch of elements which has the following copy
   return (
-    <div>
+    <div id='page-main'>
         
 
         <Copywrite/>
