@@ -15,7 +15,7 @@ const ContactUs = () => {
       </ul>
       
       <h1>Our Hours</h1>
-        <ul className='udc-left fdc'>
+        <ul className='udc-left fdc page-list'>
           <li>Tuesday - Friday: 10am to 7pm</li>
           <li>Saturday: 10am to 5pm</li>
           <li>Closed for Lunch: 12pm to 1pm</li>
