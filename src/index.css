@@ -63,9 +63,9 @@ code {
 }
 
 .margin-default{
-  padding-top:4rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  margin-top:4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 h1,
@@ -84,6 +84,6 @@ p,
 
 #page-main{
   min-width: 100vw;
-  min-height:100vw;
+  min-height:100vh;
   background-color: var(--default-black);
 }
