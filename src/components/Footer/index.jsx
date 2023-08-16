@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom'
 const Footer = () => {
   const handleOnClick = () =>{
     
-  }
 
+  }
   return (
     <footer >
       <div className='fdr se footer-main'>

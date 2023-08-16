@@ -4,7 +4,7 @@ const Service = () => {
   return (
     <div id='page-main' className='padding-default'>
       <h1>Services</h1>
-      <h2>Nor-Cal Cycles services and sepairs most makes and models of motorcycles.</h2>
+      <h2>Nor-Cal Cycles services and repairs most makes and models of motorcycles.</h2>
 
       <p>Keeping your motorcycle safe on the road or track is our number one priority.</p>
       <p>We have an in-house dynamometer; offering custom flashing and tuning.</p>
