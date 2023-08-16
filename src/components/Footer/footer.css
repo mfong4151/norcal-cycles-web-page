@@ -1,9 +1,29 @@
+.footer-main{
+    display: flex;
+    align-items: flex-start;
+}
+
 .footer-section{
     max-width:20%;
-    
+    max-height: 10%;
+    align-items: flex-start;
 }
 
-.footer-section > div > *{
+.footer-section > h3{
+    display: inline-block;
+    margin-top:1rem;
+    vertical-align: top;
+}
+
+
+
+.footer-section  > *,
+.footer-section > ul > *{
     color: var(--default-black);
+    display: flex;
+    font-size: .8rem;
 }
 
+#dcs-copy{
+
+}

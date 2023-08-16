@@ -87,3 +87,8 @@ p,
   min-height:100vh;
   background-color: var(--default-black);
 }
+
+
+.debugger{
+  border: solid 3px red;
+}

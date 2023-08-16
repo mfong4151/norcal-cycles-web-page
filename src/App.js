@@ -9,6 +9,7 @@ import Splash from './components/Splash';
 import NavBar from './components/NavBar'
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Financing from './components/Financing'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/contact-us" element={<ContactUs/>} />
           <Route path="/bikes" element={<Bikes/>} />
           <Route path="/rentals" element={<Rentals/>} />
+          <Route path='/financing' element={<Financing/>}/>
           <Route path="/service" element={<Service/>} />
           <Route path="/parts" element={<Parts/>} />
         </Routes>
