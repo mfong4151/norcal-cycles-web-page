@@ -1,7 +1,7 @@
 import React from 'react'
 import norCalBanner from  '../../assets/norcal_cylces_banner.jpg'
-import './NorCalHeader.css'
-const NorCalHeader = () => {
+import './header.css'
+const Header = () => {
   return (
     <header className='udc'>
         <img src={norCalBanner} alt="" className="banner" />
@@ -9,4 +9,4 @@ const NorCalHeader = () => {
   )
 }
 
-export default NorCalHeader
+export default Header

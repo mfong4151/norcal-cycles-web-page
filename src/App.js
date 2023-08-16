@@ -7,21 +7,23 @@ import Rentals from './components/Rentals';
 import Service from './components/Service';
 import Splash from './components/Splash';
 import NavBar from './components/NavBar'
-import NorCalHeader from './components/NorCalHeader';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
       <BrowserRouter>
-        <NorCalHeader/>
+        <Header/>
         <NavBar/>
         <Routes>
           <Route path="/" exact element={<Splash/>} />
           <Route path="/contact-us" element={<ContactUs/>} />
           <Route path="/bikes" element={<Bikes/>} />
-          <Route path="/parts" element={<Parts/>} />
           <Route path="/rentals" element={<Rentals/>} />
           <Route path="/service" element={<Service/>} />
+          <Route path="/parts" element={<Parts/>} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
   );
 };

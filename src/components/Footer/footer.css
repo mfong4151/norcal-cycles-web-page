@@ -1,0 +1,9 @@
+.footer-section{
+    max-width:20%;
+    
+}
+
+.footer-section > div > *{
+    color: var(--default-black);
+}
+
