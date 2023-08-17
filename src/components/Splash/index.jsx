@@ -10,12 +10,20 @@ const Splash = () => {
   const imageObjs = [
     {
       image: "f",
-      text: 'The first phot'
+      text: 'Our bikes'
     },
     {
       image: "a",
-      text:'The second one'
-    }
+      text:'Rentals'
+    },
+    {
+      image: "a",
+      text:'Services'
+    },
+    {
+      image: "a",
+      text:'Parts'
+    },
   ]
 
   return (

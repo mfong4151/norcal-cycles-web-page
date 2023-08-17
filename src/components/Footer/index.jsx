@@ -2,11 +2,14 @@ import React from 'react'
 import './footer.css'
 import { NavLink } from 'react-router-dom'
 
-const Footer = () => {
+const Footer = ({headerRef}) => {
+  
+  
   const handleOnClick = () =>{
-    
+    headerRef.current.scrollIntoView({behavior: 'smooth'})
 
   }
+  
   return (
     <footer >
       <div className='fdr se footer-main'>
