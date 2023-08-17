@@ -1,12 +1,13 @@
 
 
 #search-form{
-  min-width:80vw;
-  min-height:30px;
+  max-width:90vw;
+  max-height:30px;
 }
 
 #search-form > input{
-  min-width:85%;
+  max-width:80%;
+  width:80%;
   min-height:100%;
   
   padding:10px
@@ -29,7 +30,7 @@
 #search-res,
 #search-res > *
 {
-  min-width: 75vw;
+  min-width: 85vw;
 }
 
 #search-res{

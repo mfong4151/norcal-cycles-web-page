@@ -1,14 +1,16 @@
 import React from 'react'
 import DropDownItem from './DropDownItem'
-import '../searchbar.css'
+import './searchbar.css'
 
 
 const DropDownModal = ({trie, searchVal, setSearchVal,barRef}) => {
 
+
+  
   const barRefCurr= barRef.current
   const position = {
       position: 'relative', 
-      top: `${barRefCurr.offSetHeight}px`
+      top: `${barRefCurr.offsetHeight -20}px`
   }
   return (
       <div className='modal-overlay'>
@@ -16,7 +18,7 @@ const DropDownModal = ({trie, searchVal, setSearchVal,barRef}) => {
           id='search-res'  
           style={position}
           >
-          <ul>
+          <ul className='fdc'>
             {trie.complete(searchVal).map((query, idx) => 
               <DropDownItem key={idx} query={query} setSearchVal={setSearchVal}/>
             )}

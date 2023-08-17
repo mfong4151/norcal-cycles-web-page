@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import '../serachbar.css'
+import './searchbar.css'
 import DropDownModal from './DropDownModal'
 
 
@@ -30,4 +30,4 @@ const SearchBar = ({trie}) => {
   )
 }
 
-export default SearchBar
+export default SearchBar;
