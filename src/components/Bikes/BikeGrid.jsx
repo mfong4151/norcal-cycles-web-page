@@ -1,23 +1,34 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BikeGridItem from './BikeGridItem'
 
-const BikeGrid = () => {
-    //do a fetch for bikes here
-
-    const bikeOptions =  [{
-            picture: 'picture',
-            make: 'make 1',
-            model: 'model 1',
-            year: 'year',
-        }, 
-    ]
-    const bikes = [1, 2, 3, 4, 5, 6,7, 8, 9] //temporary bikes simulation
+const BikeGrid = ({bikes}) => {
+    const [currPage, setCurrPage] = useState(0)
+    const WINDOW_NUM = 9;
+    const displayedBikes = bikes.slice(currPage * WINDOW_NUM, currPage * WINDOW_NUM + WINDOW_NUM)
+    const numWindows = Math.ceil(bikes.length/WINDOW_NUM);
+    const changeWindowBtns = createChangeBtns(numWindows, setCurrPage)
 
     return (
-        <div id='bikes-grid'>
-            {bikes.map((bike, idx) => <BikeGridItem key={idx} bike={bike}/>)}
+        
+        <div>
+            <div id='bikes-grid'>
+                {displayedBikes.map((bike, idx) => <BikeGridItem key={idx} bike={bike}/>)}
+            </div>
+
+            <div className='udc'>
+                <div id='bike-pages se'>
+                    {changeWindowBtns.map((i, idx) => <button key={idx} onClick={()=> setCurrPage(i)}>{i + 1}</button>)}
+                </div>
+            </div>
+            
         </div>
     )
 }
 
 export default BikeGrid
+
+const createChangeBtns = (numWindows) =>{
+    const changeWindowBtns = [];
+    for(let i=0; i < numWindows; i ++) changeWindowBtns.push(i) 
+    return changeWindowBtns;
+}

@@ -1,13 +1,14 @@
 
 
 #search-form{
-  max-width:90vw;
+  display: flex;
+  align-items: center;
+  min-width:70vw;
   max-height:30px;
 }
 
 #search-form > input{
-  max-width:80%;
-  width:80%;
+  width:70%;
   min-height:100%;
   
   padding:10px
