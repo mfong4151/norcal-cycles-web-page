@@ -68,6 +68,11 @@ code {
   margin-right: 4rem;
 }
 
+.debugger{
+  border: solid 1px red;
+}
+
+
 h1,
 h2{
   color:var(--default-text-white);
@@ -80,15 +85,8 @@ p,
   color: var(--default-text-white);
 }
 
-
-
 #page-main{
   min-width: 100vw;
   min-height:100vh;
   background-color: var(--default-black);
-}
-
-
-.debugger{
-  border: solid 3px red;
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import Bikes from './components/Bikes';
@@ -12,9 +12,11 @@ import Footer from './components/Footer';
 import Financing from './components/Financing'
 
 const App = () => {
+  const headerRef = useRef(null)
+
   return (
       <BrowserRouter>
-        <Header/>
+        <Header headerRef={headerRef} />
         <NavBar/>
         <Routes>
           <Route path="/" exact element={<Splash/>} />
@@ -25,7 +27,7 @@ const App = () => {
           <Route path="/service" element={<Service/>} />
           <Route path="/parts" element={<Parts/>} />
         </Routes>
-        <Footer/>
+        <Footer headerRef={headerRef}/>
       </BrowserRouter>
   );
 };
