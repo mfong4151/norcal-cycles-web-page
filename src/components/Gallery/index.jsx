@@ -5,7 +5,6 @@ import GalleryItem from './GalleryItem';
 const Gallery = ({imageObjs}) => {
   const [curr, setCurr] = useState(0);
   
-  console.log(imageObjs)
   const galleryItems = imageObjs.map((imageObj, idx) => 
     <GalleryItem id={idx} image={imageObj.image} key={idx}/>
   );

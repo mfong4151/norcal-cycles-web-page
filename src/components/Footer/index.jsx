@@ -43,7 +43,7 @@ const Footer = ({headerRef}) => {
           <div>
 
           </div>
-          <h3 onClick={handleOnClick}>Scroll to top</h3>
+          <h3 className='cursor-events' onClick={handleOnClick}>Scroll to top</h3>
         </div>
       </div>
       <div id='dcs-copy' className='udc'>
