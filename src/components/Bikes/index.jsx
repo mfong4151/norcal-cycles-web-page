@@ -1,8 +1,17 @@
-import React, { useEffect, useReducer, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import BikeGrid from './BikeGrid'
 import Search from '../Search'
 
 const Bikes = () => {
+  const [make, setMake] = useState('');
+  const [model, setModel] = useState('');
+  const [useTrans, setTrans] = useState('');
+  const [yearStart, setYearStart] = useState('');
+  const [yearEnd, setYearEnd] = useState('');
+  const [priceStart, setPriceStart] = useState('');
+  const [priceEnd, setPriceEnd] = useState('');
+
+
 
   // const [bikes, dispatch] = useReducer()
     //do a fetch for bikes here

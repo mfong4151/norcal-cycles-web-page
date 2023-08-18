@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './search.css';
+import SearchForm from './SearchForm';
 
 const AdvancedSearch = () => {
     const [adSearchOn, setAdSearchOn] = useState(false)
@@ -13,7 +14,7 @@ const AdvancedSearch = () => {
     <div id='' className=''>
         {!adSearchOn && <p className='cursor-events' onClick={handleOnClick}>Advanced Search</p>}
         {adSearchOn && <p className='cursor-events' onClick={handleOnClick}>Hide Search Options</p>}
-
+        {adSearchOn && <SearchForm/>}
     </div>
   );
 };
