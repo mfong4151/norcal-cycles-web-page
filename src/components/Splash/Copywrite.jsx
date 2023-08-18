@@ -1,8 +1,9 @@
 import React from 'react'
+import './splash.css'
 
 const Copywrite = () => {
   return (
-    <div className="padding-default">
+    <div id='copy' className="padding-default">
         <h1>About Nor-Cal Cycles:</h1>
         <p>The One-Stop Motorcycle Dealer serving the San Francisco Bay Area & Beyond.</p>
 

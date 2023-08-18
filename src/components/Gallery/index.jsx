@@ -14,15 +14,16 @@ const Gallery = ({imageObjs}) => {
       e.stopPropagation()
       setCurr(parseInt(e.target.value))
     }
-  useEffect(() => {
-    const time = 4000;
-    const interval = setInterval(() => {
-      setCurr((prev) => (prev + 1) % imageObjs.length);
-    }, time);
 
-    return () => {
-      clearInterval(interval);
-    };
+  useEffect(() => {
+      const time = 4000;
+      const interval = setInterval(() => {
+        setCurr((prev) => (prev + 1) % imageObjs.length);
+      }, time);
+
+      return () => {
+        clearInterval(interval);
+      };
   }, []);
 
   return (

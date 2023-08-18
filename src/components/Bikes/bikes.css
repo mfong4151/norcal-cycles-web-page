@@ -6,7 +6,6 @@
     grid-template-rows:repeat(3, 1fr);
     grid-gap: .2rem;
     border: 1px solid var(--default-text-white);
-    margin-right:8rem;    
 }
 
 .bike{
