@@ -39,13 +39,13 @@ const Bikes = () => {
                     ] //temporary bikes simulation
     
   return (
-    <div id='page-main' className='padding-default'>
-      <h1 ref={h1Ref}>Our Bikes</h1>
+    <>
+    <h1 ref={h1Ref}>Our Bikes</h1>
       <BikeContext.Provider value ={bikeStates}>
           <Search/>
         <BikeGrid bikes={bikes} bikeStates={bikeStates}/>   
       </BikeContext.Provider>
-    </div>
+      </>
   )
 }
 

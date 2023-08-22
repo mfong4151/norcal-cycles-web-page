@@ -3,7 +3,7 @@ import './ContactUs.css'
 
 const ContactUs = () => {
   return (
-    <div id='page-main' className='padding-default'>
+    <>
       <h1>Contact Us</h1>
       <ul className='udc-left fdc page-list'>
         <li>Phone: <span className='cursor-events'>650-872-2354</span></li>
@@ -22,7 +22,8 @@ const ContactUs = () => {
           <li>Closed Sundays & Mondays</li>
           <li>Closed All Holidays </li>
         </ul>
-    </div>
+      </>
+
   )
 }
 

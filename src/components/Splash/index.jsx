@@ -12,10 +12,11 @@ const Splash = () => {
   
 
   return (
-    <div id='page-main'>
+    <>
+
         <Gallery imageObjs={galleryItems} transitionTime={7000}/>
         <Copywrite/>
-    </div>
+    </>
   )
 }
 

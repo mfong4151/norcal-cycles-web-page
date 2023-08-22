@@ -18,15 +18,19 @@ const App = () => {
       <BrowserRouter>
         <Header headerRef={headerRef} />
         <NavBar/>
+        <article id="page-main" className='padding-default'>
+
         <Routes>
-          <Route path="/" exact element={<Splash/>} />
-          <Route path="/contact-us" element={<ContactUs/>} />
-          <Route path="/bikes" element={<Bikes/>} />
-          <Route path="/rentals" element={<Rentals/>} />
-          <Route path='/financing' element={<Financing/>}/>
-          <Route path="/service" element={<Service/>} />
-          <Route path="/parts" element={<Parts/>} />
+            <Route path="/" exact element={<Splash/>} />
+            <Route path="/contact-us" element={<ContactUs/>} />
+            <Route path="/bikes" element={<Bikes/>} />
+            <Route path="/rentals" element={<Rentals/>} />
+            <Route path='/financing' element={<Financing/>}/>
+            <Route path="/service" element={<Service/>} />
+            <Route path="/parts" element={<Parts/>} />
         </Routes>
+        </article>
+
         <Footer headerRef={headerRef}/>
       </BrowserRouter>
   );

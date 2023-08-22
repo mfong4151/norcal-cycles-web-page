@@ -2,7 +2,7 @@ import React from 'react'
 
 const Service = () => {
   return (
-    <div id='page-main' className='padding-default'>
+    <>
       <h1>Services</h1>
       <h2>Nor-Cal Cycles services and repairs most makes and models of motorcycles.</h2>
 
@@ -17,7 +17,7 @@ const Service = () => {
         <li>Email: Service@norcalcycles.com</li>
       </ul>
 
-    </div>
+    </>
   )
 }
 
