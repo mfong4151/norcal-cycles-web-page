@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import './gallery.css';
 import GalleryItem from './GalleryItem';
 
-const Gallery = ({imageObjs}) => {
+
+
+const Gallery = ({imageObjs, transitionTime}) => {
   const [curr, setCurr] = useState(0);
   
   const galleryItems = imageObjs.map((imageObj, idx) => 
-    <GalleryItem id={idx} image={imageObj.image} key={idx}/>
+    <GalleryItem id={idx} image={imageObj.img} key={idx}/>
   );
 
   const handleOnClick = (e) => {
@@ -16,10 +18,9 @@ const Gallery = ({imageObjs}) => {
     }
 
   useEffect(() => {
-      const time = 4000;
       const interval = setInterval(() => {
         setCurr((prev) => (prev + 1) % imageObjs.length);
-      }, time);
+      }, transitionTime);
 
       return () => {
         clearInterval(interval);
@@ -29,7 +30,7 @@ const Gallery = ({imageObjs}) => {
   return (
     <div className="gallery-cont">
       {galleryItems[curr]}
-      <h2 className='gallery-item-name'>{imageObjs[curr].text}</h2>
+      <h2 className='gallery-item-name'>{imageObjs[curr].desc}</h2>
       <div className='gallery-slider'>
         {imageObjs.map((_ , idx) => 
           <button 

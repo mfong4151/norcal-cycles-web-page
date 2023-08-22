@@ -31,3 +31,4 @@ const DropDownModal = ({trie, searchVal, setSearchVal,barRef}) => {
 }
 
 export default DropDownModal
+

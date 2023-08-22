@@ -1,10 +1,13 @@
-  import React from 'react'
+  import React, { useEffect } from 'react'
   
   const Parts = () => {
+    
+    useEffect(()=>{
+      window.location.href = 'https://www.ebay.com/str/norcalcycles'
+    },[])
+    
     return (
-      <div className='padding-default'>
-        <h1>Parts</h1>
-      </div>
+      <></>
     )
   }
   

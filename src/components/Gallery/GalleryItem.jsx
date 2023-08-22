@@ -16,14 +16,13 @@ const GalleryItem = ({id, image}) => {
     }, [])
             
     return (
-       <div 
+     
+        <img
             id={`gallery-itm-${id}`} 
-            className='gallery-item' 
+            className='gallery-img' 
             ref={itemRef}
-        >
-        {image}
-        
-        </div>
+            src={image} alt=''
+        />
     );
 };
 

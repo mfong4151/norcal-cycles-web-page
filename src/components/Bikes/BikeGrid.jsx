@@ -7,15 +7,7 @@ const BikeGrid = ({bikes, bikeStates}) => {
     const displayedBikes = bikes.slice(currPage * WINDOW_NUM, currPage * WINDOW_NUM + WINDOW_NUM)
     const numWindows = Math.ceil(bikes.length/WINDOW_NUM);
     const changeWindowBtns = createChangeBtns(numWindows, setCurrPage)
-    const {
-        make, setMake,
-        model, setModel,
-        useTrans, setTrans,
-        yearStart, setYearStart,
-        yearEnd, setYearEnd,
-        priceStart, setPriceStart,
-        priceEnd, setPriceEnd
-    } = bikeStates;
+ 
     
     return (
         

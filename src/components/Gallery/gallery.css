@@ -27,14 +27,16 @@
     flex-wrap: wrap;
 }
 
-.gallery-item{
+.gallery-img{
+    max-width: 80%;
+    min-width: 80%;
     font-size: 200px;
     opacity: 0;
     transform: translateX(100%);
     transition: opacity 0.5s, transform 0.5s;
 }
 
-.gallery-item.visible{
+.gallery-img.visible{
     opacity: 1;
     transform: translateX(0);
 }
