@@ -1,9 +1,11 @@
-import React from 'react'
-import './splash.css'
+import React from 'react';
+import './about.css';
 
-const Copywrite = () => {
+const index = () => {
+
+
   return (
-    <div id='copy' className="padding-default">
+    <>
         <h1>About Nor-Cal Cycles:</h1>
         <p>The One-Stop Motorcycle Dealer serving the San Francisco Bay Area & Beyond.</p>
 
@@ -22,8 +24,8 @@ const Copywrite = () => {
             <p>Financing is available through our many lenders O.A.C.</p>
             <p>We stock thousands of new & used parts see our store here ebay.com/str/norcalcycles</p>
             <p>Don't see it on our site? contact us!</p>
-        </div>
-  )
-}
+    </>
+  );
+};
 
-export default Copywrite
+export default index;

@@ -8,11 +8,26 @@
     border: 1px solid var(--default-text-white);
 }
 
+.bike-img{
+    max-width:50%
+}
+
+.info-holder{
+    padding-left: 1rem;
+    width:50%
+}
+
 .bike{
     min-width:33%;
     min-height:33%;
-    border: 1px solid red;
+    border: 1px solid white;
     color: var(--default-text-white);
     font-size:18px; 
     
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.6; 
+    cursor: not-allowed; 
 }

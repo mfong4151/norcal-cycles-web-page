@@ -1,22 +1,22 @@
-import React, {useState} from 'react';
-import './search.css';
+import React, { useState } from 'react';
+import './search.css'; 
 import SearchForm from './SearchForm';
 
 const AdvancedSearch = () => {
-    const [adSearchOn, setAdSearchOn] = useState(false)
-    const handleOnClick = (e) => {
-        e.preventDefault()
-        e.stopPropagation()
-        setAdSearchOn(prev => !prev)
-    }
+    const [adSearchOn, setAdSearchOn] = useState(false);
 
-  return (
-    <div id='' className=''>
-        {!adSearchOn && <p className='cursor-events' onClick={handleOnClick}>Advanced Search</p>}
-        {adSearchOn && <p className='cursor-events' onClick={handleOnClick}>Hide Search Options</p>}
-        {adSearchOn && <SearchForm/>}
-    </div>
-  );
+    const handleOnClick = () => {
+        setAdSearchOn(!adSearchOn);
+    };
+
+    return (
+        <div className='search-container'>
+            <p className='cursor-events' onClick={handleOnClick}>
+                {adSearchOn ? 'Hide Search Options' : 'Advanced Search'}
+            </p>
+            {adSearchOn && <SearchForm />}
+        </div>
+    );
 };
 
 export default AdvancedSearch;

@@ -1,0 +1,10 @@
+#adv-search-form{
+    padding-bottom: 1rem;
+    transition: max-height 0.3s ease;
+}
+
+#adv-search-form> div > label{
+    color: var(--default-text-white);
+}
+
+

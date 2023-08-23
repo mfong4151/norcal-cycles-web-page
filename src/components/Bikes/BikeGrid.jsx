@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
 import BikeGridItem from './BikeGridItem'
 
-const BikeGrid = ({bikes, bikeStates}) => {
+const BikeGrid = ({bikes}) => {
     const [currPage, setCurrPage] = useState(0)
     const WINDOW_NUM = 9;
     const displayedBikes = bikes.slice(currPage * WINDOW_NUM, currPage * WINDOW_NUM + WINDOW_NUM)
-    const numWindows = Math.ceil(bikes.length/WINDOW_NUM);
-    const changeWindowBtns = createChangeBtns(numWindows, setCurrPage)
- 
+    const numPages = Math.ceil(bikes.length/WINDOW_NUM);
+    const changeWindowBtns = createChangeBtns(numPages, setCurrPage)
     
     return (
         
@@ -18,7 +17,19 @@ const BikeGrid = ({bikes, bikeStates}) => {
 
             <div className='udc'>
                 <div id='bike-pages se'>
-                    {changeWindowBtns.map((i, idx) => <button key={idx} onClick={()=> setCurrPage(i)}>{i + 1}</button>)}
+                    <button
+                        className={`lr-button ${!currPage && 'disabled'}`}
+                        onClick={()=> setCurrPage(prev => prev -1)}
+                    >
+                        Left
+                    </button>
+                    {changeWindowBtns.map((i, idx) => <button key={idx} onClick={()=> setCurrPage(i)}>{i + 1}</button>)} 
+                    <button
+                        className={`lr-button ${currPage === numPages -1 && 'disabled'}`}
+                        onClick={()=> setCurrPage(prev => prev + 1)}
+                    >
+                        Right
+                    </button>
                 </div>
             </div>
             

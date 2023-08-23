@@ -6,7 +6,7 @@
 
 .footer-section{
     max-width:20%;
-    max-height: 10%;
+    max-height: 10vh;
     align-items: flex-start;
 }
 
@@ -26,5 +26,7 @@
 }
 
 #dcs-copy{
-    
+    background-color: var(--default-black);
+    color: var(--default-text-white);
+    padding: .3rem 0rem;
 }

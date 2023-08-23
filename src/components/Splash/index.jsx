@@ -1,5 +1,4 @@
 import React from 'react'
-import Copywrite from './Copywrite';
 import Gallery from '../Gallery';
 import galleryItems from './galleryItems';
 
@@ -15,7 +14,6 @@ const Splash = () => {
     <>
 
         <Gallery imageObjs={galleryItems} transitionTime={7000}/>
-        <Copywrite/>
     </>
   )
 }

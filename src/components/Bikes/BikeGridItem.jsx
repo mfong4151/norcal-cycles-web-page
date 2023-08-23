@@ -1,20 +1,30 @@
 import React from 'react'
 import './bikes.css'
+import { useNavigate } from 'react-router-dom'
+
 
 const BikeGridItem = ({bike}) => {
+  const navigate = useNavigate();
+
+  const handleOnClick = (e) => {
+      e.preventDefault()
+      e.stopPropagation()
+      navigate(`/bike/${bike.id}`)
+  }
+  
   return (
-    <div className='bike udc cursor-events'>
-        <img src="" alt="" />
-        <div>
-            <h4 className="name"></h4>
-            <ul>
-                <li className="make"></li>
-                <li className="model"></li>
-                <li className="milelage"></li>
+    <div className='bike se cursor-events' onClick={handleOnClick}>
+        <img className='bike-img' src={bike.images[0]} alt="" />
+        <div className='info-holder'>
+            <h4 className="name">{bike.name}</h4>
+            <ul className='fdc'>
+                <li className="transmission">{`Transmission: ${bike.transmission}`}</li>
+                <li className="engine">{`Engine: ${bike.engine}`}</li>
+                <li className="milelage">{`Miles: ${bike.miles}`}</li>
             </ul>
-            <p className="price"></p>
+            <p className='bike-id'>{`Stock No: ${bike.id}`}</p>
+            <p className="price">{`$${bike.price}`}</p>
         </div>
-        {bike}
     </div>
   )
 }

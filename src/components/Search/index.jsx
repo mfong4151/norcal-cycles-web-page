@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, {useLayoutEffect, useRef } from 'react';
 import './search.css';
 import SearchBar from '../SearchBar';
 import { createTrieWords } from './utils/trieWords';

@@ -8,6 +8,7 @@ nav {
     background-color: #f2f2f2;
     border-bottom: 1px solid #ccc;
     max-width:100vw;
+    white-space: nowrap;
   }
   
   ul {
@@ -19,6 +20,10 @@ nav {
   
   nav > ul > li {
     margin: 0 1rem;
+  }
+
+  nav > ul > li > a {
+    min-width:100%
   }
   
   nav > ul > li:first-child {
