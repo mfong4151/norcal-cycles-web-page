@@ -9,7 +9,7 @@ export const BikeContext = createContext();
 //Probably will do a fetch for bikes here
 const Bikes = () => {
     //Temporary bikes solution
-    const bikes = testBikes;
+    const bikes = Object.values(testBikes);
     const h1Ref = useRef(null)
 
     const [make, setMake] = useState('');
