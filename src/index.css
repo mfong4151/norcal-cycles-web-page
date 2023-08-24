@@ -125,5 +125,10 @@ p,
 }
 
 
+ul > li > *{
+  all: unset;
+  color: var(--default-text-white);
+}
+
 /* Buttons for bike page  */
 

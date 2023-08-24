@@ -1,22 +1,28 @@
-import React, {useLayoutEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import './search.css';
 import SearchBar from '../SearchBar';
-import { createTrieWords } from './utils/trieWords';
 import AdvancedSearch from './AdvancedSearch';
 import { Trie } from '../../datastructures/trie';
 
-const Search = () => {
-    const trieWords = createTrieWords();
+const Search = ({bikes, setBikes}) => {
+
     const defaultTrie = new Trie();
     const trie = useRef(defaultTrie)
-
+    
     useLayoutEffect(()=>{
-        defaultTrie.build(trieWords)
+        const bikeNames = [];  
+        for(const bike of bikes){
+          bikeNames.push(bike.name)
+        }
+        defaultTrie.build(bikeNames)
+
     }, [])
+
+  
 
   return (
     <div id='' className=''>
-        <SearchBar trie={trie.current}/>
+        <SearchBar trie={trie.current} setBikes={setBikes}/>
         <AdvancedSearch/>
     </div>
   );

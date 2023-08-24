@@ -32,10 +32,33 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 4 columns */
     gap: 10px; /* Gap between grid items */
-    padding: 20px; /* Padding around the grid */
+    padding: 15px; /* Padding around the grid */
 }
 
 .show-gallery-grid > img{
-    width:70%;
+    width:100%;
 
+}
+
+#bike-info > h3{
+    color: var(--default-text-white)
+}
+
+#bike-info > ul{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    
+}
+
+
+
+#bike-info > ul > li >span{
+    
+
+}
+
+#bike-info > ul> li > p {
+    
 }

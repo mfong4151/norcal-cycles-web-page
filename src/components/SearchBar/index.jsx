@@ -3,13 +3,14 @@ import './searchbar.css'
 import DropDownModal from './DropDownModal'
 
 
-const SearchBar = ({trie}) => {
+const SearchBar = ({trie, setBikes}) => {
   const [searchVal, setSearchVal] = useState('')
   const searchBarRef = useRef(null)
   const handleOnClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
-
+      trie.search(searchVal)
+      setBikes()
   }
   
   return (

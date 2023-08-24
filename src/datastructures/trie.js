@@ -42,6 +42,7 @@ export class Trie extends StringTrees{
     build(words){
         this.words = words;
         for(const[idx, word] of this.words.entries()) this.insert(word, idx)
+        
         return
     }
     //Used to return the associated words, given that we have a word list alreaady

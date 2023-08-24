@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { HashRouter } from 'react-router-dom';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import Bikes from './components/Bikes';
@@ -17,7 +18,7 @@ const App = () => {
   const headerRef = useRef(null)
 
   return (
-      <BrowserRouter>
+      <HashRouter>
         <Header headerRef={headerRef} />
         <NavBar/>
         <article id="page-main" className='padding-default'>
@@ -36,7 +37,7 @@ const App = () => {
         </article>
 
         <Footer headerRef={headerRef}/>
-      </BrowserRouter>
+      </HashRouter>
   );
 };
 

@@ -9,7 +9,8 @@ export const BikeContext = createContext();
 //Probably will do a fetch for bikes here
 const Bikes = () => {
     //Temporary bikes solution
-    const bikes = Object.values(testBikes);
+    const allBikes = Object.values(testBikes)
+    const [bikes, setBikes] = useState(allBikes);
     const h1Ref = useRef(null)
 
     const [make, setMake] = useState('');
@@ -30,6 +31,7 @@ const Bikes = () => {
       priceEnd, setPriceEnd,
     };
 
+  console.log(bikes)
   useEffect(()=>{
     h1Ref.current.scrollIntoView({behavior:'smooth'})
   }, [])
@@ -38,7 +40,7 @@ const Bikes = () => {
     <>
     <h1 ref={h1Ref}>Our Bikes</h1>
       <BikeContext.Provider value ={bikeStates}>
-          <Search/>
+        <Search bikes={bikes} setBikes={setBikes}/>
         <BikeGrid bikes={bikes} bikeStates={bikeStates}/>   
       </BikeContext.Provider>
       </>
