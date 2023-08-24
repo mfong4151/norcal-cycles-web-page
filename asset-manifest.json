@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.019b586d.css",
-    "main.js": "/static/js/main.511afd6e.js",
-    "static/media/WorkSans-VariableFont_wght.ttf": "/static/media/WorkSans-VariableFont_wght.a334cdd18c435a867b49.ttf",
-    "static/media/bike10.jpg": "/static/media/bike10.908653c4361b559d24cf.jpg",
-    "static/media/bike3.jpg": "/static/media/bike3.a472773e7e79942fee71.jpg",
-    "static/media/bike6.jpg": "/static/media/bike6.05656d6aa4a5196bebb9.jpg",
-    "static/media/bike7.jpg": "/static/media/bike7.cc25b46442d3133d72ae.jpg",
-    "static/media/bike4.jpg": "/static/media/bike4.e2e2b58acbca4362b073.jpg",
-    "static/media/bike2.jpg": "/static/media/bike2.13ee2db157ee26cb00df.jpg",
-    "static/media/bike8.jpg": "/static/media/bike8.13ee2db157ee26cb00df.jpg",
-    "static/media/parts.avif": "/static/media/parts.f6c6451924ca1dbfc5bd.avif",
-    "static/media/bike5.jpg": "/static/media/bike5.1171b46db47864bd9483.jpg",
-    "static/media/bike9.jpg": "/static/media/bike9.7d739300330f41b9a891.jpg",
-    "static/media/bike1.jpg": "/static/media/bike1.e211daccd01407ded1b2.jpg",
-    "static/media/our-bikes.avif": "/static/media/our-bikes.c817a5223d6d53bb2cf2.avif",
-    "static/media/rentals.avif": "/static/media/rentals.30ba3cb22fc8c1a609f3.avif",
-    "static/media/service.avif": "/static/media/service.3522ab263053899e472d.avif",
-    "static/media/norcal_cylces_banner.jpg": "/static/media/norcal_cylces_banner.8a89c284add047214b5c.jpg",
-    "index.html": "/index.html",
-    "main.019b586d.css.map": "/static/css/main.019b586d.css.map",
-    "main.511afd6e.js.map": "/static/js/main.511afd6e.js.map"
+    "main.css": "/norcal-cycles-web-page/static/css/main.3f7631d6.css",
+    "main.js": "/norcal-cycles-web-page/static/js/main.fde1908e.js",
+    "static/media/WorkSans-VariableFont_wght.ttf": "/norcal-cycles-web-page/static/media/WorkSans-VariableFont_wght.a334cdd18c435a867b49.ttf",
+    "static/media/bike10.jpg": "/norcal-cycles-web-page/static/media/bike10.908653c4361b559d24cf.jpg",
+    "static/media/bike3.jpg": "/norcal-cycles-web-page/static/media/bike3.a472773e7e79942fee71.jpg",
+    "static/media/bike6.jpg": "/norcal-cycles-web-page/static/media/bike6.05656d6aa4a5196bebb9.jpg",
+    "static/media/bike7.jpg": "/norcal-cycles-web-page/static/media/bike7.cc25b46442d3133d72ae.jpg",
+    "static/media/bike4.jpg": "/norcal-cycles-web-page/static/media/bike4.e2e2b58acbca4362b073.jpg",
+    "static/media/bike2.jpg": "/norcal-cycles-web-page/static/media/bike2.13ee2db157ee26cb00df.jpg",
+    "static/media/bike8.jpg": "/norcal-cycles-web-page/static/media/bike8.13ee2db157ee26cb00df.jpg",
+    "static/media/parts.avif": "/norcal-cycles-web-page/static/media/parts.f6c6451924ca1dbfc5bd.avif",
+    "static/media/bike5.jpg": "/norcal-cycles-web-page/static/media/bike5.1171b46db47864bd9483.jpg",
+    "static/media/bike9.jpg": "/norcal-cycles-web-page/static/media/bike9.7d739300330f41b9a891.jpg",
+    "static/media/bike1.jpg": "/norcal-cycles-web-page/static/media/bike1.e211daccd01407ded1b2.jpg",
+    "static/media/our-bikes.avif": "/norcal-cycles-web-page/static/media/our-bikes.c817a5223d6d53bb2cf2.avif",
+    "static/media/rentals.avif": "/norcal-cycles-web-page/static/media/rentals.30ba3cb22fc8c1a609f3.avif",
+    "static/media/service.avif": "/norcal-cycles-web-page/static/media/service.3522ab263053899e472d.avif",
+    "static/media/norcal_cylces_banner.jpg": "/norcal-cycles-web-page/static/media/norcal_cylces_banner.8a89c284add047214b5c.jpg",
+    "index.html": "/norcal-cycles-web-page/index.html",
+    "main.3f7631d6.css.map": "/norcal-cycles-web-page/static/css/main.3f7631d6.css.map",
+    "main.fde1908e.js.map": "/norcal-cycles-web-page/static/js/main.fde1908e.js.map"
   },
   "entrypoints": [
-    "static/css/main.019b586d.css",
-    "static/js/main.511afd6e.js"
+    "static/css/main.3f7631d6.css",
+    "static/js/main.fde1908e.js"
   ]
 }
