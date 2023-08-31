@@ -12,7 +12,7 @@ import bike10 from './photos/bike10.jpg'
 
 export const testBikes = {
   1: {
-    "name": "Model A",
+    "name": "2018 A",
     "transmission": "Manual",
     "engine": "V-Twin",
     "id": 1,
@@ -26,7 +26,7 @@ export const testBikes = {
     "year": 2022
   },
   2: {
-    "name": "Model B",
+    "name": "2018 B",
     "transmission": "Automatic",
     "engine": "Inline Four",
     "id": 2,
@@ -40,7 +40,7 @@ export const testBikes = {
     "year": 2023
   },
   3: {
-    "name": "Model C",
+    "name": "2016 C",
     "transmission": "Manual",
     "engine": "Parallel Twin",
     "id": 3,
@@ -54,7 +54,7 @@ export const testBikes = {
     "year": 2022
   },
   4: {
-    "name": "Model D",
+    "name": "2016 D",
     "transmission": "Automatic",
     "engine": "V6",
     "id": 4,
@@ -68,7 +68,7 @@ export const testBikes = {
     "year": 2021
   },
   5: {
-    "name": "Model E",
+    "name": "2017 E",
     "transmission": "Manual",
     "engine": "Inline Six",
     "id": 5,
@@ -82,7 +82,7 @@ export const testBikes = {
     "year": 2022
   },
   6: {
-    "name": "Model F",
+    "name": "2017 F",
     "transmission": "Automatic",
     "engine": "V8",
     "id": 6,
@@ -96,7 +96,7 @@ export const testBikes = {
     "year": 2023
   },
   7: {
-    "name": "Model G",
+    "name": "2019 G",
     "transmission": "Manual",
     "engine": "Single Cylinder",
     "id": 7,
@@ -110,7 +110,7 @@ export const testBikes = {
     "year": 2021
   },
   8: {
-    "name": "Model H",
+    "name": "2019 H",
     "transmission": "Automatic",
     "engine": "V-Twin",
     "id": 8,
@@ -124,7 +124,7 @@ export const testBikes = {
     "year": 2022
   },
   9: {
-    "name": "Model I",
+    "name": "2023 I",
     "transmission": "Manual",
     "engine": "Inline Four",
     "id": 9,
@@ -138,7 +138,7 @@ export const testBikes = {
     "year": 2023
   },
   10: {
-    "name": "Model J",
+    "name": "2023 J",
     "transmission": "Automatic",
     "engine": "Parallel Twin",
     "id": 10,
@@ -152,7 +152,7 @@ export const testBikes = {
     "year": 2021
   },
   11: {
-    "name": "Model K",
+    "name": "2023 K",
     "transmission": "Manual",
     "engine": "V6",
     "id": 11,

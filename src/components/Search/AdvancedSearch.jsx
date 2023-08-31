@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './search.css'; 
 import SearchForm from './SearchForm';
 
-const AdvancedSearch = () => {
+const AdvancedSearch = ({allBikes, setBikes}) => {
     const [adSearchOn, setAdSearchOn] = useState(false);
 
     const handleOnClick = () => {
@@ -14,7 +14,7 @@ const AdvancedSearch = () => {
             <p className='cursor-events' onClick={handleOnClick}>
                 {adSearchOn ? 'Hide Search Options' : 'Advanced Search'}
             </p>
-            {adSearchOn && <SearchForm />}
+            {adSearchOn && <SearchForm allBikes={allBikes} setBikes={setBikes}/>}
         </div>
     );
 };

@@ -31,7 +31,6 @@ const Bikes = () => {
       priceEnd, setPriceEnd,
     };
 
-  console.log(bikes)
   useEffect(()=>{
     h1Ref.current.scrollIntoView({behavior:'smooth'})
   }, [])
@@ -40,7 +39,7 @@ const Bikes = () => {
     <>
     <h1 ref={h1Ref}>Our Bikes</h1>
       <BikeContext.Provider value ={bikeStates}>
-        <Search bikes={bikes} setBikes={setBikes}/>
+        <Search allBikes={allBikes} setBikes={setBikes}/>
         <BikeGrid bikes={bikes} bikeStates={bikeStates}/>   
       </BikeContext.Provider>
       </>

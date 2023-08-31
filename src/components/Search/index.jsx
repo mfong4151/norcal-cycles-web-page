@@ -4,14 +4,14 @@ import SearchBar from '../SearchBar';
 import AdvancedSearch from './AdvancedSearch';
 import { Trie } from '../../datastructures/trie';
 
-const Search = ({bikes, setBikes}) => {
+const Search = ({allBikes, setBikes}) => {
 
     const defaultTrie = new Trie();
     const trie = useRef(defaultTrie)
     
     useLayoutEffect(()=>{
         const bikeNames = [];  
-        for(const bike of bikes){
+        for(const bike of allBikes){
           bikeNames.push(bike.name)
         }
         defaultTrie.build(bikeNames)
@@ -22,8 +22,8 @@ const Search = ({bikes, setBikes}) => {
 
   return (
     <div id='' className=''>
-        <SearchBar trie={trie.current} setBikes={setBikes}/>
-        <AdvancedSearch/>
+        <SearchBar trie={trie.current} setBikes={setBikes} allBikes={allBikes}/>
+        <AdvancedSearch allBikes={allBikes} setBikes={setBikes}/>
     </div>
   );
 };

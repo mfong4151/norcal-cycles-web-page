@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import './search.css';
 import { BikeContext } from '../Bikes';
 
-const SearchForm = () => {
+const SearchForm = ({allBikes, setBikes}) => {
     
     const { make, setMake,
         model, setModel,
@@ -11,6 +11,8 @@ const SearchForm = () => {
         yearEnd, setYearEnd,
         priceStart, setPriceStart,
         priceEnd, setPriceEnd,} = useContext(BikeContext)
+
+    const filterStates = {make, model, yearStart, yearEnd, priceStart, priceEnd}
 
     const handleOnSubmit = (e) => {
         e.preventDefault()

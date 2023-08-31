@@ -53,6 +53,7 @@ export class Trie extends StringTrees{
             curr = curr.children[c];
 
         }
+
         const res = [];
 
         for(const i of curr.words)  res.push(this.words[i])
