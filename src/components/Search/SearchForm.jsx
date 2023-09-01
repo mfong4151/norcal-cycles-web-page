@@ -13,20 +13,22 @@ const SearchForm = ({allBikes, setBikes}) => {
         priceEnd, setPriceEnd,} = useContext(BikeContext)
 
     
-    const filterBikes = (bike) =>  (
-        (yearStart <= bike.year <= bike.yearEnd || (!yearStart && !yearEnd)) &&
-        (priceStart <= bike.price <= bike.priceEnd || (!priceStart && !priceEnd) ) &&
-        (bike.make === make.toLowerCase() || (!bike.make) ) &&
-        (bike.model === model.toLowerCase() || (!bike.model) ) &&
-        (bike.transmission === trans.toLowerCase() || (!bike.transmission))
-    )
+    const filterBikes = (bike) =>  {
+       return ((!yearStart && !yearEnd) || yearStart <= bike.year <= bike.yearEnd) &&
+        ((!priceStart && !priceEnd)  || priceStart <= bike.price <= bike.priceEnd ) &&
+        ( (!bike.make) || bike.make === make.toLowerCase()) &&
+        ( (!bike.model) || bike.model === model.toLowerCase() ) &&
+        ( (!bike.transmission) || bike.transmission === trans.toLowerCase())
+    }
 
 
     const handleOnSubmit = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        
-        const newBikes = allBikes.filter(filterBikes)
+
+
+        console.log(yearStart, yearEnd, priceStart, priceEnd, make, model, trans)
+        const newBikes = allBikes.filter(bike => filterBikes(bike))
         setBikes(newBikes)
 
     }
@@ -43,6 +45,7 @@ const SearchForm = ({allBikes, setBikes}) => {
         setYearEnd(0)
         setPriceStart(0)
         setPriceEnd(0)
+        setBikes(allBikes)
     }
 
     return (
@@ -69,14 +72,14 @@ const SearchForm = ({allBikes, setBikes}) => {
                             type="number"
                             id="yearStart"
                             value={yearStart ? yearStart : 'Start'}
-                            onChange={e => setYearStart(e.target.value)}
+                            onChange={e => setYearStart(parseInt(e.target.value))}
                             placeholder='Start'
                             />
                         <input
                             type="number"
                             id="yearEnd"
                             value={yearEnd ? yearEnd : 'End'}
-                            onChange={e => setYearEnd(e.target.value)}
+                            onChange={e => setYearEnd(parseInt(e.target.value))}
                             placeholder='End'
                             />
                     </div>
@@ -116,14 +119,14 @@ const SearchForm = ({allBikes, setBikes}) => {
                             type="number"
                             id="priceStart"
                             value={ priceStart ? priceStart : "Start"}
-                            onChange={e => setPriceStart(e.target.value)}
+                            onChange={e => setPriceStart(parseInt(e.target.value))}
                             placeholder="Start"
                             />
                         <input
                             type="number"
                             id="priceEnd"
                             value={priceEnd ? priceEnd : "End"}
-                            onChange={e => setPriceEnd(e.target.value)}
+                            onChange={e => setPriceEnd(parseInt(e.target.value))}
                             placeholder='End'
                             />
                     </div>

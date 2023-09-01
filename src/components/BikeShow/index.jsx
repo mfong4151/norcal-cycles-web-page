@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import ShowGallery from './ShowGallery'
 import { testBikes } from '../../testBikes/testBikes'
+import makeBikeName from '../../utils/makeBikeName'
 
 const BikeShow = () => {
   const params = useParams()
@@ -11,7 +12,7 @@ const BikeShow = () => {
   return (
     <>
       <NavLink to='/bikes' className=''>Return to search</NavLink>
-      <h1>{bike.name}</h1>
+      <h1>{makeBikeName(bike)}</h1>
       <ShowGallery id={id} imgs={bike.images}/>
       <div id='bike-info' >
         <h3>{`$${bike.price}`}</h3>

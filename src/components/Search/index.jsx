@@ -3,6 +3,7 @@ import './search.css';
 import SearchBar from '../SearchBar';
 import AdvancedSearch from './AdvancedSearch';
 import { Trie } from '../../datastructures/trie';
+import makeBikeName from '../../utils/makeBikeName';
 
 const Search = ({allBikes, setBikes}) => {
 
@@ -12,7 +13,7 @@ const Search = ({allBikes, setBikes}) => {
     useLayoutEffect(()=>{
         const bikeNames = [];  
         for(const bike of allBikes){
-          bikeNames.push(bike.name)
+          bikeNames.push(makeBikeName(bike))
         }
         defaultTrie.build(bikeNames)
 
