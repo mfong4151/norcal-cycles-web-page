@@ -1,4 +1,4 @@
-const filterBikes =(allBikes, filterStates) => {
+const filterBikes =( bike) => {
     const  {make, model, yearStart, yearEnd, priceStart, priceEnd} = filterStates;
 
     const newBikes = [];

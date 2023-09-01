@@ -16,10 +16,11 @@ const Bikes = () => {
     const [make, setMake] = useState('');
     const [model, setModel] = useState('');
     const [trans, setTrans] = useState('');
-    const [yearStart, setYearStart] = useState('');
-    const [yearEnd, setYearEnd] = useState('');
-    const [priceStart, setPriceStart] = useState('');
-    const [priceEnd, setPriceEnd] = useState('');
+    const [yearStart, setYearStart] = useState(0);
+    const [yearEnd, setYearEnd] = useState(0);
+    const [priceStart, setPriceStart] = useState(0);
+    const [priceEnd, setPriceEnd] = useState(0);
+    
     const bikeStates = {
     
       make, setMake,
