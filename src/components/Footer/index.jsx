@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.css'
 import { NavLink } from 'react-router-dom'
+import {Facebook, Yelp} from './SVGs'
 
 const Footer = ({headerRef}) => {
 
@@ -38,8 +39,10 @@ const Footer = ({headerRef}) => {
         </div>
         <div className="fdc footer-section">
           <h3>Connect</h3>
-          <div>
-
+          
+          <div className='sb'>
+            <Facebook/>
+            <Yelp/>
           </div>
           <h3 className='cursor-events underline-events' onClick={handleOnClick}>Scroll to top</h3>
         </div>

@@ -1,9 +1,10 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import './search.css';
 import { BikeContext } from '../Bikes';
+import handleErrors from './utils/handleErrors';
 
 const SearchForm = ({allBikes, setBikes}) => {
-    
+    const [errors, setErrors] = useState([])
     const { make, setMake,
         model, setModel,
         trans, setTrans,
@@ -14,11 +15,14 @@ const SearchForm = ({allBikes, setBikes}) => {
 
     
     const filterBikes = (bike) =>  {
-       return ((!yearStart && !yearEnd) || yearStart <= bike.year <= bike.yearEnd) &&
-        ((!priceStart && !priceEnd)  || priceStart <= bike.price <= bike.priceEnd ) &&
-        ( (!bike.make) || bike.make === make.toLowerCase()) &&
-        ( (!bike.model) || bike.model === model.toLowerCase() ) &&
-        ( (!bike.transmission) || bike.transmission === trans.toLowerCase())
+
+        const isYear = (yearStart <= bike.year && bike.year <= yearEnd) || (!yearStart && !yearEnd)
+        const isPrice = (priceStart <= bike.price && bike.price <= priceEnd) || (!priceStart && !priceEnd)
+        const isMake = (bike.make.toLowerCase() === make.toLowerCase()) || !make
+        const isModel = (bike.model.toLowerCase() === model.toLowerCase()) || !model
+        const isTrans =  (bike.transmission === trans.toLowerCase() && !!trans) || !trans 
+        return isYear && isPrice && isMake && isModel && isTrans 
+
     }
 
 
@@ -26,18 +30,24 @@ const SearchForm = ({allBikes, setBikes}) => {
         e.preventDefault()
         e.stopPropagation()
 
+        const newErrors = handleErrors(yearStart, yearEnd, priceStart, priceEnd)
+        if (newErrors.length){
+            setErrors(newErrors)
+            return
+        }
 
-        console.log(yearStart, yearEnd, priceStart, priceEnd, make, model, trans)
         const newBikes = allBikes.filter(bike => filterBikes(bike))
         setBikes(newBikes)
 
     }
 
+    useEffect(()=>{
+        setErrors([])
+    }, [make, model, trans, yearStart, yearEnd, priceStart, priceEnd])
     //Reset
     const handleOnClick = (e) => {
         e.preventDefault()
         e.stopPropagation()
-        
         setMake('')
         setModel('')
         setTrans('')
@@ -132,13 +142,23 @@ const SearchForm = ({allBikes, setBikes}) => {
                     </div>
                 </div>
                 
-                <div className='udc-right'>
-                    <button type="submit">
-                        Search
-                    </button>
-                    <button onClick={handleOnClick}>
-                        Reset
-                    </button>
+                <div className='sb'>
+                    <div/>
+
+                    {errors.length > 0 && 
+                        <div>
+                            {errors.map((error,idx) => <p key={idx}>{error}</p>)}
+                        </div>
+                    }
+
+                    <div>
+                        <button type="submit">
+                            Search
+                        </button>
+                        <button onClick={handleOnClick}>
+                            Reset
+                        </button>
+                    </div>
                 </div>
         </form>
     )
