@@ -27,8 +27,8 @@
     font-size: .9rem;
 }
 
-.info-holder > h4{
-    font-size: 1rem;
+.bike > h4{
+    font-size: 1.5rem;
 }
 
 .bike{
@@ -50,6 +50,29 @@
     pointer-events: none;
     opacity: 0.6; 
     cursor: not-allowed; 
+}
+
+
+#page-changer{
+    margin-top: 1rem;
+}
+
+#page-changer > button {
+    height:30px;
+    width: 30px;
+}
+
+.lr-button{
+    min-width:60px;
+}
+
+#l-btn{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+#r-btn{
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 

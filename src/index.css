@@ -123,10 +123,11 @@ p,
   background-color: var(--default-black);
 }
 
-#page-main > img{
-    
+.btn-defaults{
+  background-color: black;
+  color: white;
+  border: white solid 1px;
 }
-
 
 ul > li > *{
   all: unset;
