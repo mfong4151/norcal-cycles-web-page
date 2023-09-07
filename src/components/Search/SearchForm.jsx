@@ -152,10 +152,10 @@ const SearchForm = ({allBikes, setBikes}) => {
                     }
 
                     <div>
-                        <button type="submit">
+                        <button className='btn-defaults' type="submit">
                             Search
                         </button>
-                        <button onClick={handleOnClick}>
+                        <button className='btn-defaults' onClick={handleOnClick}>
                             Reset
                         </button>
                     </div>

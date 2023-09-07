@@ -5,7 +5,6 @@
     grid-template-columns:repeat(3, 1fr);
     grid-template-rows:repeat(3, 1fr);
     grid-gap: .2rem;
-    border: 1px solid var(--default-text-white);
 }
 
 .bike-itm-body{
@@ -14,14 +13,20 @@
     justify-content: space-evenly;
 }
 
-.bike-img{
-    max-width:50%
+
+.bike-itm-body > img{
+    object-fit:cover;
+    max-height:170px;
+    max-width: 170px;
 }
+
 
 .info-holder{
     padding-left: 1rem;
     width:50%
 }
+
+
 
 .info-holder > *{
     font-size: .9rem;
@@ -40,11 +45,6 @@
     padding-left: 1rem;    
 }
 
-.bike-itm-body > img{
-    object-fit:contain;
-    height:60%;
-    width: 60%;
-}
 
 .disabled{
     pointer-events: none;

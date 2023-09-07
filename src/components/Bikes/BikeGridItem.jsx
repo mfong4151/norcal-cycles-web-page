@@ -17,7 +17,8 @@ const BikeGridItem = ({bike}) => {
     <div className='bike cursor-events' onClick={handleOnClick}>
         <h4 className="name udc">{bikeName}</h4>
         <div className='bike-itm-body'>
-          <img className='bike-img' src={bike.images[0]} alt=""/>
+          <img src={bike.images[0]} alt=""/>
+
           <div className='info-holder'>
               <ul className='fdc'>
                   <li className="transmission">{`Transmission: ${bike.transmission}`}</li>

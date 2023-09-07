@@ -11,14 +11,19 @@ const SearchBar = ({trie, setBikes, allBikes}) => {
       e.stopPropagation();
       const newBikes = [];
       for(const bike of allBikes){
-        if(bike.name.includes(searchVal)) newBikes.push(bike);
+        const name = `${bike.year} ${bike.make} ${bike.model}`
+        if(bike.make.includes(searchVal) || bike.model.includes(searchVal) ||
+            bike.transmission.includes(searchVal) || bike.engine.includes(searchVal)
+            || name.includes(searchVal)
+        ) newBikes.push(bike);
       }
 
+      setSearchVal('')
       setBikes(newBikes)
       
   }
   
-  const handleClear = (e) => {
+  const handleReset = (e) => {
       e.preventDefault()
       e.stopPropagation()
       setBikes(allBikes)
@@ -28,8 +33,8 @@ const SearchBar = ({trie, setBikes, allBikes}) => {
     <div>
       <form id='search-form' ref={searchBarRef}>
         <input type="text" value={searchVal} onChange={e => setSearchVal( e.target.value)}/>
-        <button onClick={handleOnClick}>Search</button>
-        <button onClick={handleClear}>Reset</button>
+        <button className='btn-defaults cursor-events' onClick={handleOnClick}>Search</button>
+        <button className='btn-defaults cursor-events' onClick={handleReset}>Reset</button>
       </form>
       {searchVal && 
         <DropDownModal 
