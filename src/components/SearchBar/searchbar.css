@@ -28,16 +28,22 @@
 }
 
 
-#search-res,
-#search-res > *
-{
-  min-width: 85vw;
-}
+
 
 #search-res{
   border: .1rem solid var(--text-color-blk);
-}
+  max-height:30vh;
+  min-width: 61vw;
+  overflow-y: auto;
+  overflow-x: hidden;
 
+
+}
+#search-res > ul
+{
+  width: 100%;
+  height:100%;
+}
 
 .drop-down-itm{
   color: var(--text-color-blk);

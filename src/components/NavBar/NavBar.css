@@ -1,18 +1,18 @@
 /* Navbar.css */
 
 nav {
+    position:relative;
     display: flex;
 
     justify-content: center;
     align-items: center;
     padding: 1rem;
     background-color: #f2f2f2;
-    border-bottom: 1px solid #ccc;
     max-width:100vw;
     white-space: nowrap;
   }
   
-  ul {
+  nav > ul {
     list-style: none;
     display: flex;
     gap:1rem;
@@ -35,18 +35,23 @@ nav {
   }
   
   nav > ul > li> a {
-    text-decoration: none;
     color: inherit;
     font-weight: bold;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease;
   }
   
-  nav > ul > li> a:hover {
-    background-color: #ddd;
+
+  nav a:hover {
+    color: var(--color-stone-400);
   }
-  
-  nav > ul > li> a.active {
-    background-color: #ccc;
+
+
+  nav .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: var(--color-stone-950); /* Adjust as needed */
+    transition: all 0.3s ease-in-out;
+    
   }
-  

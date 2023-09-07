@@ -12,10 +12,14 @@ const SearchBar = ({trie, setBikes, allBikes}) => {
       const newBikes = [];
       for(const bike of allBikes){
         const name = `${bike.year} ${bike.make} ${bike.model}`
-        if(bike.make.includes(searchVal) || bike.model.includes(searchVal) ||
-            bike.transmission.includes(searchVal) || bike.engine.includes(searchVal)
-            || name.includes(searchVal)
-        ) newBikes.push(bike);
+        const bikeAttrs = [ 
+          bike.make,
+          bike.model,
+          bike.transmission,
+          bike.engine,
+          name,
+        ];
+        for(const i of bikeAttrs) if(i.includes(searchVal))  newBikes.push(bike);
       }
 
       setSearchVal('')
