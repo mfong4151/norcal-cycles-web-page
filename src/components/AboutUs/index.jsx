@@ -22,7 +22,7 @@ const index = () => {
             <p>View our Pre-Owned Inventory online! We Buy Motorcycles!</p>
             <p>BUY - SELL - TRADE - CONSIGNMENTS</p>
             <p>Financing is available through our many lenders O.A.C.</p>
-            <p>We stock thousands of new & used parts see our store <a href='ebay.com/str/norcalcycles' target='_blank'>here</a></p>
+            <p>We stock thousands of new & used parts see our store <a href='https://www.ebay.com/str/norcalcycles' target='_blank'>here</a></p>
             <p>Don't see it on our site? contact us!</p>
     </>
   );

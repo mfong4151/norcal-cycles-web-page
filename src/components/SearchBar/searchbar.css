@@ -1,16 +1,22 @@
 
 
+
+#search-comp{
+  width:100%;
+}
+
 #search-form{
   display: flex;
   align-items: center;
-  min-width:70vw;
   max-height:30px;
+  width:100%;
 }
 
+
+
 #search-form > input{
-  width:70%;
+  width:100%;
   min-height:100%;
-  
   padding:10px
 }
 
@@ -20,24 +26,26 @@
   font-size:16px;
   font-weight:600;
   padding:8px;
+  border-radius: 1rem;
 }
 
 .modal-overlay{
   position: absolute;
   min-height: 100%;
+  width:100%;
 }
 
 
 
 
 #search-res{
+  margin:0;
+  position:relative;
   border: .1rem solid var(--text-color-blk);
   max-height:30vh;
-  min-width: 61vw;
   overflow-y: auto;
   overflow-x: hidden;
-
-
+  width:60%;
 }
 #search-res > ul
 {

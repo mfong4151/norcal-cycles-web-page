@@ -3,20 +3,19 @@ import DropDownItem from './DropDownItem'
 import './searchbar.css'
 
 
-const DropDownModal = ({trie, searchVal, setSearchVal,barRef}) => {
+const DropDownModal = ({trie, searchVal, setSearchVal,barRef, searchFormRef}) => {
 
 
-  
   const barRefCurr= barRef.current
-  const position = {
-      position: 'relative', 
-      top: `${barRefCurr.offsetHeight -20}px`
+  const style = {
+      top: `${barRefCurr.offsetHeight -20}px`,
   }
+
   return (
       <div className='modal-overlay'>
         <dialog open
           id='search-res'  
-          style={position}
+          style={style}
           >
           <ul className='fdc'>
             {trie.complete(searchVal).map((query, idx) => 

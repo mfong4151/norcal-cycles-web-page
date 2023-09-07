@@ -133,13 +133,13 @@ body {
 
 
 .padding-default{
-  padding-top:3rem;
+  padding-top:2rem;
   padding-left: 5rem;
   padding-right: 5rem;
 }
 
 .margin-default{
-  margin-top:4rem;
+  margin-top:3rem;
   margin-left: 4rem;
   margin-right: 4rem;
 }
@@ -179,6 +179,7 @@ p,
   color: white;
   border: 1px solid white;
   transition: background-color 0.3s, border-color 0.3s;
+}
 
 .btn-defaults:hover {
   background-color: #333333; 
@@ -189,6 +190,15 @@ p,
   border-color: #f5f5f5; 
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  gap:1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
 
 ul > li > *{
   all: unset;

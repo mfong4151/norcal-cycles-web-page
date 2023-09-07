@@ -6,6 +6,7 @@ import DropDownModal from './DropDownModal'
 const SearchBar = ({trie, setBikes, allBikes}) => {
   const [searchVal, setSearchVal] = useState('')
   const searchBarRef = useRef(null)
+  const searchFormRef = useRef(null)
   const handleOnClick = (e) => {
       e.preventDefault();
       e.stopPropagation();
@@ -19,7 +20,10 @@ const SearchBar = ({trie, setBikes, allBikes}) => {
           bike.engine,
           name,
         ];
-        for(const i of bikeAttrs) if(i.includes(searchVal))  newBikes.push(bike);
+        for(const i of bikeAttrs) if(i.includes(searchVal)){  
+          newBikes.push(bike);
+          break;
+        }
       }
 
       setSearchVal('')
@@ -34,9 +38,9 @@ const SearchBar = ({trie, setBikes, allBikes}) => {
   } 
 
   return (
-    <div>
+    <div id='search-comp'>
       <form id='search-form' ref={searchBarRef}>
-        <input type="text" value={searchVal} onChange={e => setSearchVal( e.target.value)}/>
+        <input type="text" ref={searchFormRef} value={searchVal} onChange={e => setSearchVal( e.target.value)}/>
         <button className='btn-defaults cursor-events' onClick={handleOnClick}>Search</button>
         <button className='btn-defaults cursor-events' onClick={handleReset}>Reset</button>
       </form>
@@ -46,6 +50,7 @@ const SearchBar = ({trie, setBikes, allBikes}) => {
           searchVal={searchVal} 
           setSearchVal={setSearchVal}
           barRef={searchBarRef}  
+          searchFormRef={searchFormRef}
         />
       }
   </div>

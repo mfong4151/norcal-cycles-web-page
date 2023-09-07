@@ -7,7 +7,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #f2f2f2;
+    background-color: var(--color-slate-300);
     max-width:100vw;
     white-space: nowrap;
   }
