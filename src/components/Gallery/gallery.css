@@ -1,12 +1,14 @@
-
-.gallery-cont{
-    min-width:50vw;
-    min-height: 50vh;
+.gallery-cont {
+    min-height: inherit;
+    min-height: inherit;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    
+  }
+  
+
 
 .gallery-slider{
     display: flex;
@@ -18,7 +20,15 @@
     min-width:30%;
     min-height:2rem;
     background-color: black;
+    border-radius: 2rem;
+    border: solid 1px white;
 }
+
+
+.gallery-slider::after{
+    filter: blur(3.5);
+}
+
 
 .gallery-item-name{
     font-size: 4rem;
@@ -48,6 +58,6 @@
 
 .active-slider-btn,
 .gallery-slider-btn:active{
-    background-color:black;
+    background-color: var(--color-zinc-800);
 }
 

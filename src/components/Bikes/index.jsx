@@ -10,7 +10,7 @@ export const BikeContext = createContext();
 const Bikes = () => {
     //Temporary bikes solution
     const allBikes = Object.values(testBikes)
-    const [bikes, setBikes] = useState(allBikes);
+    const [bikes, setBikes] =useState(allBikes);
     const h1Ref = useRef(null)
 
     const [make, setMake] = useState('');
@@ -34,11 +34,11 @@ const Bikes = () => {
 
   useEffect(()=>{
     h1Ref.current.scrollIntoView({behavior:'smooth'})
-  }, [])
+  }, []) 
     
   return (
     <>
-    <h1 ref={h1Ref}>Our Bikes</h1>
+    <h1 id='our-bikes' ref={h1Ref}>Bike Inventory</h1>
       <BikeContext.Provider value ={bikeStates}>
         <Search allBikes={allBikes} setBikes={setBikes}/>
         <BikeGrid bikes={bikes} bikeStates={bikeStates}/>   

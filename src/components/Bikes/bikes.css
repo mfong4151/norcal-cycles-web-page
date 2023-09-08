@@ -32,13 +32,18 @@
     font-size: .9rem;
 }
 
-.bike > h4{
-    font-size: 1.5rem;
-}
+.bike > h4 {
+    font-size: 1.5rem; /* Initial font size */
+
+ 
+
+  }
+  
+
 
 .bike{
-    min-width:33%;
-    min-height:33%;
+    width:rem;
+    height:18rem;
     border: 1px solid white;
     color: var(--default-text-white);
     font-size:1rem; 

@@ -11,7 +11,7 @@ const BikeGrid = ({bikes}) => {
     
     return (
         
-        <div>
+        <div className='udc fdc'>
             <div id='bikes-grid'>
                 {displayedBikes.map((bike, idx) => <BikeGridItem key={idx} bike={bike}/>)}
             </div>
@@ -25,7 +25,7 @@ const BikeGrid = ({bikes}) => {
                     Left
                 </button>
                 {changeWindowBtns.map((i, idx) => 
-                    <button className='cursor-events btn-defaults' key={idx} onClick={()=> setCurrPage(i)}>{i + 1}</button>
+                    <button className={`cursor-events btn-defaults ${currPage === i && 'disabled'}`} key={idx} onClick={()=> setCurrPage(i)}>{i + 1}</button>
                 )} 
                 <button
                     id='r-btn'

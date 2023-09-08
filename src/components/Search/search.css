@@ -7,4 +7,8 @@
     color: var(--default-text-white);
 }
 
-
+.adv-search-btns{
+    border-radius: 1rem;
+    padding: .5rem;
+    margin:.5rem
+}

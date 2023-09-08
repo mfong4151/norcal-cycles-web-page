@@ -1,6 +1,8 @@
 import React from 'react'
 import Gallery from '../Gallery';
 import galleryItems from './galleryItems';
+import './splash.css'
+
 
 const Splash = () => {
   //Create a gallery component for all of the portals where they sell things
@@ -11,10 +13,10 @@ const Splash = () => {
   
 
   return (
-    <>
+    <div id='gallery-holder' className='udc'>
 
-        <Gallery imageObjs={galleryItems} transitionTime={7000}/>
-    </>
+      <Gallery imageObjs={galleryItems} transitionTime={7000}/>
+    </div>
   )
 }
 

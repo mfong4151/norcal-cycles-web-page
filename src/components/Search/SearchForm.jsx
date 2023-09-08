@@ -44,6 +44,7 @@ const SearchForm = ({allBikes, setBikes}) => {
     useEffect(()=>{
         setErrors([])
     }, [make, model, trans, yearStart, yearEnd, priceStart, priceEnd])
+
     //Reset
     const handleOnClick = (e) => {
         e.preventDefault()
@@ -151,11 +152,11 @@ const SearchForm = ({allBikes, setBikes}) => {
                         </div>
                     }
 
-                    <div>
-                        <button className='btn-defaults' type="submit">
+                    <div id='adv-search-btn-holder'>
+                        <button className='btn-defaults adv-search-btns' type="submit">
                             Search
                         </button>
-                        <button className='btn-defaults' onClick={handleOnClick}>
+                        <button className='btn-defaults adv-search-btns' onClick={handleOnClick}>
                             Reset
                         </button>
                     </div>

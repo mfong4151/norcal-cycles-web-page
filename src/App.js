@@ -21,6 +21,9 @@ const App = () => {
       <HashRouter>
         <Header headerRef={headerRef} />
         <NavBar/>
+        <div id='page-main-bound' className='udc'>
+
+
         <article id="page-main" className='padding-default'>
           <Routes>
               <Route path="/" exact element={<Splash/>} />
@@ -36,6 +39,7 @@ const App = () => {
           </Routes>
         </article>
 
+        </div>
         <Footer headerRef={headerRef}/>
       </HashRouter>
   );

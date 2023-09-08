@@ -1,3 +1,8 @@
 #copy{
     padding-bottom: 1rem;
 }
+
+#gallery-holder{
+    min-width: inherit;
+    min-height: inherit;
+}
