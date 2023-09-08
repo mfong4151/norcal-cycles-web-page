@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/norcal-cycles-web-page/static/css/main.3f7631d6.css",
-    "main.js": "/norcal-cycles-web-page/static/js/main.fde1908e.js",
-    "static/media/WorkSans-VariableFont_wght.ttf": "/norcal-cycles-web-page/static/media/WorkSans-VariableFont_wght.a334cdd18c435a867b49.ttf",
+    "main.css": "/norcal-cycles-web-page/static/css/main.a14a499f.css",
+    "main.js": "/norcal-cycles-web-page/static/js/main.93455700.js",
+    "static/media/Inter-Regular.ttf": "/norcal-cycles-web-page/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "static/media/bike-shop.jpg": "/norcal-cycles-web-page/static/media/bike-shop.7cffbe5d070bb35b366f.jpg",
     "static/media/bike10.jpg": "/norcal-cycles-web-page/static/media/bike10.908653c4361b559d24cf.jpg",
     "static/media/bike3.jpg": "/norcal-cycles-web-page/static/media/bike3.a472773e7e79942fee71.jpg",
     "static/media/bike6.jpg": "/norcal-cycles-web-page/static/media/bike6.05656d6aa4a5196bebb9.jpg",
@@ -19,11 +20,11 @@
     "static/media/service.avif": "/norcal-cycles-web-page/static/media/service.3522ab263053899e472d.avif",
     "static/media/norcal_cylces_banner.jpg": "/norcal-cycles-web-page/static/media/norcal_cylces_banner.8a89c284add047214b5c.jpg",
     "index.html": "/norcal-cycles-web-page/index.html",
-    "main.3f7631d6.css.map": "/norcal-cycles-web-page/static/css/main.3f7631d6.css.map",
-    "main.fde1908e.js.map": "/norcal-cycles-web-page/static/js/main.fde1908e.js.map"
+    "main.a14a499f.css.map": "/norcal-cycles-web-page/static/css/main.a14a499f.css.map",
+    "main.93455700.js.map": "/norcal-cycles-web-page/static/js/main.93455700.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f7631d6.css",
-    "static/js/main.fde1908e.js"
+    "static/css/main.a14a499f.css",
+    "static/js/main.93455700.js"
   ]
 }
