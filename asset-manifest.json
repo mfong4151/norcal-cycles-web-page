@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/norcal-cycles-web-page/static/css/main.a14a499f.css",
+    "main.css": "/norcal-cycles-web-page/static/css/main.e092af52.css",
     "main.js": "/norcal-cycles-web-page/static/js/main.93455700.js",
     "static/media/Inter-Regular.ttf": "/norcal-cycles-web-page/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
     "static/media/bike-shop.jpg": "/norcal-cycles-web-page/static/media/bike-shop.7cffbe5d070bb35b366f.jpg",
@@ -20,11 +20,11 @@
     "static/media/service.avif": "/norcal-cycles-web-page/static/media/service.3522ab263053899e472d.avif",
     "static/media/norcal_cylces_banner.jpg": "/norcal-cycles-web-page/static/media/norcal_cylces_banner.8a89c284add047214b5c.jpg",
     "index.html": "/norcal-cycles-web-page/index.html",
-    "main.a14a499f.css.map": "/norcal-cycles-web-page/static/css/main.a14a499f.css.map",
+    "main.e092af52.css.map": "/norcal-cycles-web-page/static/css/main.e092af52.css.map",
     "main.93455700.js.map": "/norcal-cycles-web-page/static/js/main.93455700.js.map"
   },
   "entrypoints": [
-    "static/css/main.a14a499f.css",
+    "static/css/main.e092af52.css",
     "static/js/main.93455700.js"
   ]
 }
