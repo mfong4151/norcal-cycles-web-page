@@ -11,7 +11,7 @@ const BikeShow = () => {
   
   return (
     <>
-      <NavLink to='/bikes' className=''>Return to search</NavLink>
+      <NavLink to='/bikes'>Return to search</NavLink>
       <h1>{makeBikeName(bike)}</h1>
       <ShowGallery id={id} imgs={bike.images}/>
       <div id='bike-info' >

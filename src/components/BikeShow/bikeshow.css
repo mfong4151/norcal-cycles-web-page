@@ -24,21 +24,35 @@
     transform: translateX(0);
 }
 
-.gallery-cont{}
+#show-gallery{
+    max-height:50vh;
+    max-width:100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#show-gallery > img {
+    max-width: 100%;
+    min-width:70%
+}
 
 
 .show-gallery-grid{
-
+    overflow-y: scroll;
     display: grid;
+    overflow-x: hidden;
     grid-template-columns: repeat(2, 1fr); /* 4 columns */
     gap: 10px; /* Gap between grid items */
     padding: 15px; /* Padding around the grid */
+    max-width:30%;
 }
+
 
 .show-gallery-grid > img{
     width:100%;
 
 }
+
 
 #bike-info > h3{
     color: var(--default-text-white)

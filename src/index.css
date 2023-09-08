@@ -177,7 +177,7 @@ p,
 }
 
 #page-main{
-  min-width: 70vw;
+  width: 70vw;
   min-height: 70vh;
   padding-bottom: 1rem;
   background-color: var(--default-black);
@@ -224,5 +224,9 @@ ul > li > *{
     padding-bottom: 2rem;
   }
 
+  #page-main{
+    width: 100vw;
+
+  }
 
 }

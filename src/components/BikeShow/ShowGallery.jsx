@@ -27,7 +27,8 @@ const ShowGallery = ({imgs}) => {
   
 
   return (
-    <div id='' className='fdr'>
+    <div id='show-gallery' className='fdr'>
+
         {imgEls[curr]}
         <div className='show-gallery-grid'>
             {imgs.map((img, idx) => 
@@ -40,6 +41,7 @@ const ShowGallery = ({imgs}) => {
             /> 
         )}
         </div>
+
     </div>
   );
 };

@@ -4,7 +4,7 @@ import './bikes.css'
 
 const BikeGrid = ({bikes}) => {
     const [currPage, setCurrPage] = useState(0)
-    const WINDOW_NUM = 9;
+    const WINDOW_NUM = 6;
     const displayedBikes = bikes.slice(currPage * WINDOW_NUM, currPage * WINDOW_NUM + WINDOW_NUM)
     const numPages = Math.ceil(bikes.length/WINDOW_NUM);
     const changeWindowBtns = createChangeBtns(numPages, setCurrPage)
