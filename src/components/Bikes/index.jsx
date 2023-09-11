@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import BikeGrid from './BikeGrid'
 import Search from '../Search'
 import { createContext } from "react";
@@ -11,7 +11,6 @@ const Bikes = () => {
     //Temporary bikes solution
     const allBikes = Object.values(testBikes)
     const [bikes, setBikes] =useState(allBikes);
-    const h1Ref = useRef(null)
 
     const [make, setMake] = useState('');
     const [model, setModel] = useState('');
@@ -32,13 +31,10 @@ const Bikes = () => {
       priceEnd, setPriceEnd,
     };
 
-  useEffect(()=>{
-    h1Ref.current.scrollIntoView({behavior:'smooth'})
-  }, []) 
-    
+
   return (
     <>
-    <h1 id='our-bikes' ref={h1Ref}>Bike Inventory</h1>
+      <h1 id='our-bikes'>Bike Inventory</h1>
       <BikeContext.Provider value ={bikeStates}>
         <Search allBikes={allBikes} setBikes={setBikes}/>
         <BikeGrid bikes={bikes} bikeStates={bikeStates}/>   

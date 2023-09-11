@@ -14,13 +14,21 @@ const BikeGridItem = ({bike}) => {
   }
   
   return (
-    <div className='bike cursor-events fdc udc' onClick={handleOnClick}>
-        <h4 className="name">{bikeName}</h4>
+    <div className='bike cursor-events fdc' onClick={handleOnClick}>
         <img src={bike.images[0]} alt=""/>
-
-             
-         <p className="price">{`$${bike.price}.00`}</p>
-
+        <h4 className="name">{bikeName}</h4>
+        <ul className='fdc'>
+         <li className="price">{`$${bike.price}.00`}</li>
+          <li><span>Transmission: </span> {bike.transmission}</li>
+          <li><span>Engine: </span>{bike.engine}</li>
+          <li><span>Stock No: </span>{bike.id}</li>
+          <li><span>Miles: </span>{bike.miles}</li>
+        </ul>
+        <div className='bike-btn-holder udc-left'>
+          <button className='btn-defaults cursor-events'>
+            Check it out
+          </button>
+        </div>
     </div>
   )
 }

@@ -1,18 +1,21 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import BikeGridItem from './BikeGridItem'
 import './bikes.css'
 
 const BikeGrid = ({bikes}) => {
+    const bikeGridRef = useRef()
     const [currPage, setCurrPage] = useState(0)
     const WINDOW_NUM = 6;
     const displayedBikes = bikes.slice(currPage * WINDOW_NUM, currPage * WINDOW_NUM + WINDOW_NUM)
     const numPages = Math.ceil(bikes.length/WINDOW_NUM);
     const changeWindowBtns = createChangeBtns(numPages, setCurrPage)
-    
-    return (
+    useEffect(()=>{
+        bikeGridRef.current.scrollIntoView({behavior:'smooth'})
+      }, []) 
         
-        <div className='udc fdc'>
-            <div id='bikes-grid'>
+    return (
+        <div id='bike-page-main' className='udc fdc'>
+            <div id='bikes-grid' ref={bikeGridRef}>
                 {displayedBikes.map((bike, idx) => <BikeGridItem key={idx} bike={bike}/>)}
             </div>
 
