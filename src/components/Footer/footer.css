@@ -2,6 +2,8 @@
     display: flex;
     align-items: flex-start;
     padding-bottom:1.5rem;
+    color: var(--default-black);
+
 }
 
 .footer-section{
@@ -15,11 +17,17 @@
     vertical-align: top;
 }
 
+@media screen and (max-width:600px) {
+    .footer-section > h3{
+        height: 2rem;
+        padding-bottom:1rem;
+    }
+}
 
 
-.footer-section  > *,
-.footer-section > ul > *{
+.footer-section  > * > *{
     color: var(--default-black);
+    all:unset;
     display: flex;
     font-size: .8rem;
 }

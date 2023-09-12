@@ -1,21 +1,56 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, {useState, useRef} from 'react'
 import BikeGridItem from './BikeGridItem'
 import './bikes.css'
 
-const BikeGrid = ({bikes}) => {
-    const bikeGridRef = useRef()
+const BikeGrid = ({bikes, bikeGridRef}) => {
     const [currPage, setCurrPage] = useState(0)
     const WINDOW_NUM = 6;
     const displayedBikes = bikes.slice(currPage * WINDOW_NUM, currPage * WINDOW_NUM + WINDOW_NUM)
     const numPages = Math.ceil(bikes.length/WINDOW_NUM);
-    const changeWindowBtns = createChangeBtns(numPages, setCurrPage)
-    useEffect(()=>{
+    const slidingWindow = useRef([0, 10])
+    const GAP_SIZE = 10;
+    let [l, r] = slidingWindow.current
+    const changeWindowBtns = createChangeBtns(numPages)
+
+    const setSlidngWindow = (i) =>{
+        const windowGap = slidingWindow.current;
+        windowGap[0] = Math.min(numPages - GAP_SIZE, Math.max(i-2, 0));
+        windowGap[1] = windowGap[0] + GAP_SIZE;
+        setCurrPage(i)
         bikeGridRef.current.scrollIntoView({behavior:'smooth'})
-      }, []) 
+
+    }
+    
+
+    const handleOnClick = (e, i) =>{
+        e.preventDefault()
+        e.stopPropagation()
+        setSlidngWindow(i)
+        
+    }
+
+
+    const handleLRClick = (e) =>{
+        const id = e.target.id;
+        e.preventDefault()
+        e.stopPropagation()
+        
+        switch(id){
+            case 'l-btn':
+                setSlidngWindow(0)
+                break
+            case 'r-btn':
+                setSlidngWindow(numPages -1)
+                break
+            default:
+                break
+        }
+    }
+   
         
     return (
         <div id='bike-page-main' className='udc fdc'>
-            <div id='bikes-grid' ref={bikeGridRef}>
+            <div id='bikes-grid'>
                 {displayedBikes.map((bike, idx) => <BikeGridItem key={idx} bike={bike}/>)}
             </div>
 
@@ -23,17 +58,22 @@ const BikeGrid = ({bikes}) => {
                 <button
                     id='l-btn'
                     className={`lr-button btn-defaults cursor-events ${!currPage && 'disabled'}`}
-                    onClick={()=> setCurrPage(prev => prev -1)}
+                    onClick={handleLRClick}
                 >
                     Left
                 </button>
                 {changeWindowBtns.map((i, idx) => 
-                    <button className={`cursor-events btn-defaults ${currPage === i && 'disabled'}`} key={idx} onClick={()=> setCurrPage(i)}>{i + 1}</button>
-                )} 
+                    <button 
+                        className={`cursor-events btn-defaults ${currPage === i && 'disabled'}`} 
+                        key={idx} 
+                        onClick={e => handleOnClick(e, i)}>
+                        {i + 1}
+                    </button>
+                ).slice(l, r)} 
                 <button
                     id='r-btn'
                     className={`lr-button btn-defaults cursor-events ${currPage === numPages -1 && 'disabled'}`}
-                    onClick={()=> setCurrPage(prev => prev + 1)}
+                    onClick={handleLRClick}
                 >
                     Right
                 </button>

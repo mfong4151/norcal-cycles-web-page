@@ -2,6 +2,7 @@ import React from 'react'
 import './bikes.css'
 import { useNavigate } from 'react-router-dom'
 import makeBikeName from '../../utils/makeBikeName';
+import { RightArrow } from '../svg/RightArrow';
 
 
 const BikeGridItem = ({bike}) => {
@@ -21,15 +22,16 @@ const BikeGridItem = ({bike}) => {
 
         </div>
         <ul className='fdc'>
-         <li ><span className='price'>{`$${bike.price}.00`}</span></li>
+         <li ><span className='price'>{`$${bike.price}`}</span><span>00</span></li>
           <li><span className='bike-attr'>Transmission: </span> {bike.transmission}</li>
           <li><span className='bike-attr'>Engine: </span>{bike.engine}</li>
           <li><span className='bike-attr'>Stock No: </span>{bike.id}</li>
           <li><span className='bike-attr'>Miles: </span>{bike.miles}</li>
         </ul>
         <div className='bike-btn-holder udc-left'>
-          <button className='btn-defaults cursor-events'>
+          <button className='btn-defaults cursor-events se'>
             Check it out
+            <RightArrow/>
           </button>
         </div>
     </div>

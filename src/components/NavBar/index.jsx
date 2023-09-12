@@ -1,19 +1,27 @@
 import React,  { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './NavBar.css'
+import useWindowSize from '../../hooks/useWindowSize';
 
 const Navbar = () => {
 
   const navRef = useRef(null);
   const [underlineStyle, setUnderlineStyle] = useState({});
-
+  const {windowWidth, windowHeight} = useWindowSize();
   const handleOnClick = (event) => {
+    if (windowWidth < 920) return
+
     const clickedLink = event.target;
     setUnderlineStyle({
       width: clickedLink.offsetWidth,
       left: clickedLink.offsetLeft
     });
   };
+
+  useEffect(()=>{
+    if (windowWidth < 920)  setUnderlineStyle({});
+  
+  }, [windowWidth])
 
   return (
       <nav ref={navRef}>

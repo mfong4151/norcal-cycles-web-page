@@ -15,8 +15,10 @@ const Footer = ({headerRef}) => {
       <div className='fdr se footer-main'>
         <div className="fdc footer-section">
           <h3>Nor-Cal Cycles</h3>
-          <p>1585-1587 El Camino Real Millbrae, CA 94030</p>
-          <p>Call us: <span>650-872-2354</span></p>
+          <div>
+            <p>1585-1587 El Camino Real Millbrae, CA 94030</p>
+            <p>Call us: <span>650-872-2354</span></p>
+          </div>
         </div>
         <div className="fdc footer-section">
           <h3>Quick Links</h3>
