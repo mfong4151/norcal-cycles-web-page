@@ -6,7 +6,7 @@
 
 :root{
   --default-header-black: #000000;
-  --default-border-purple:  #454665;
+  --default-border-purple:  #5a2529;
   --default-black: #09090b;
   --default-text-white: #ffffff;
   --color-slate-700:#334155;
@@ -161,7 +161,9 @@ ul > li > *{
   color: var(--default-text-white);
 }
 
-/* Buttons for bike page  */
+
+
+
 
 @media screen and (max-width: 600px) {
   .padding-default{

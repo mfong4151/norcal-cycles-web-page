@@ -1,4 +1,17 @@
 
+.show-btn{
+    width: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.show-btn > a{
+    all:unset;
+    font-size: 1.2rem;
+    color: var(--default-text-white);
+    
+}
+
 .gallery-cont{
     min-width:50vw;
     min-height: 50vh;
@@ -11,8 +24,7 @@
 
 
 .gallery-img{
-    max-width: 80%;
-    min-width: 80%;
+    width:100%;
     font-size: 200px;
     opacity: 0;
     transform: translateX(100%);
@@ -28,34 +40,82 @@
     max-height:50vh;
     max-width:100%;
     display: flex;
-    justify-content: space-evenly;
 }
 
 #show-gallery > img {
-    max-width: 100%;
-    min-width:70%
+    object-fit: contain;
+    width:70%;
 }
-
 
 .show-gallery-grid{
-    overflow-y: scroll;
     display: grid;
-    overflow-x: hidden;
     grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    gap: 10px; /* Gap between grid items */
-    padding: 15px; /* Padding around the grid */
-    max-width:30%;
+    gap: .2rem; /* Gap between grid items */
 }
 
+.show-gallery-grid > img{
+    object-fit: contain;
+}
+
+@media screen and (min-width:601px) {
+    #show-gallery{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    #show-gallery > img {
+        object-fit: contain;
+        width:70%;
+    }
+    .show-gallery-grid{
+        overflow-y: auto;
+        overflow-x: hidden;
+        grid-template-columns: repeat(2, 1fr); /* 4 columns */
+        margin-left:1rem;
+        gap: .5rem;
+        width:30%;
+        
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    #show-gallery{
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    #show-gallery > img {
+        object-fit: contain;
+        width:100%;
+    }
+    .show-gallery-grid{
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        gap: 10px; /* Gap between grid items */
+        padding: 0rem; /* Padding around the grid */
+        margin:0rem;
+        margin-top:1rem;
+        min-width:100%;
+    }
+
+}
 
 .show-gallery-grid > img{
     width:100%;
 
 }
 
+#bike-info{
+    margin-bottom: 1.5rem;
+}
 
 #bike-info > h3{
-    color: var(--default-text-white)
+    color: var(--default-text-white);
+    font-size: 2rem;
+}
+
+#bike-info > h3 > span{
+    all:unset;
+    font-size:1.5rem;
 }
 
 #bike-info > ul{
@@ -66,13 +126,6 @@
     
 }
 
-
-
-#bike-info > ul > li >span{
-    
-
-}
-
-#bike-info > ul> li > p {
-    
+#bike-info span{
+    font-weight: 600;
 }

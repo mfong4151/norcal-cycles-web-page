@@ -94,19 +94,13 @@
     font-weight:600;
     min-height: 2rem;
     padding:1rem;
-    border: transparent;
     border-radius: 2rem;
     margin-left:.5rem;
-    background-color: var(--default-black);
     transition: background-color 0.3s, border-color 0.3s;
-    border: solid .1rem var(--default-border-purple)
 
 }
 
-.bike-btn-holder > button:hover{
-    background-color: #a9aabc;
-    color: var(--default-black);
-}
+
 
 #page-changer{
     margin-top: 1rem;

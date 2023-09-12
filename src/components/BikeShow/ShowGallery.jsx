@@ -27,7 +27,7 @@ const ShowGallery = ({imgs}) => {
   
 
   return (
-    <div id='show-gallery' className='fdr'>
+    <div id='show-gallery'>
 
         {imgEls[curr]}
         <div className='show-gallery-grid'>

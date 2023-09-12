@@ -11,11 +11,14 @@ const BikeShow = () => {
   
   return (
     <>
-      <NavLink to='/bikes'>Return to search</NavLink>
+      <button className='btn-defaults show-btn cursor-events'>
+        <NavLink to='/bikes'>Return to search</NavLink>
+
+      </button>
       <h1>{makeBikeName(bike)}</h1>
       <ShowGallery id={id} imgs={bike.images}/>
       <div id='bike-info' >
-        <h3>{`$${bike.price}`}</h3>
+        <h3>{`$${bike.price}`}<span>.00</span></h3>
         <ul >
           <li>
             <span>Color:</span> <p>{bike.color}</p>
