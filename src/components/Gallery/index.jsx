@@ -8,7 +8,7 @@ const Gallery = ({imageObjs, transitionTime}) => {
   const [curr, setCurr] = useState(0);
   
   const galleryItems = imageObjs.map((imageObj, idx) => 
-    <GalleryItem id={idx} image={imageObj.img} key={idx}/>
+    <GalleryItem id={idx} imageObj={imageObj} key={idx}/>
   );
 
   const handleOnClick = (e) => {
@@ -28,7 +28,7 @@ const Gallery = ({imageObjs, transitionTime}) => {
   }, []);
 
   return (
-    <div className="gallery-cont">
+    <div className="gallery-cont fdc">
       {galleryItems[curr]}
       <h2 className='gallery-item-name'>{imageObjs[curr].desc}</h2>
       <div className='gallery-slider'>

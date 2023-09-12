@@ -1,6 +1,6 @@
 .gallery-cont {
     min-height: inherit;
-    min-height: inherit;
+    min-width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -21,7 +21,7 @@
     min-height:2rem;
     background-color: black;
     border-radius: 2rem;
-    border: solid 1px white;
+    border: solid .1rem var(--default-border-purple);
 }
 
 
@@ -31,15 +31,13 @@
 
 
 .gallery-item-name{
+
     font-size: 4rem;
-    position:absolute;
-    bottom:2rem;
     flex-wrap: wrap;
 }
 
 .gallery-img{
-    max-width: 80%;
-    min-width: 80%;
+    object-fit: fill;
     font-size: 200px;
     opacity: 0;
     transform: translateX(100%);

@@ -17,17 +17,19 @@
     width:97%;
     height:42rem;
     color: var(--default-text-white);
-    background-color: var(--color-zinc-800);
     font-size:1rem; 
+    border: solid 1px var(--default-border-purple);
 }
 
-
-.bike > h4 {
-    font-size: 1.5rem;
-    margin: 0;
-    margin-top: 1rem;
-    width:94%;
- }
+.name-holder{
+    margin-top: 1.6rem;
+    height:3rem;
+    width:100%
+}
+.bike-name {
+    font-size: 20px;
+    margin:0.5rem;
+}
   
 
 .bike > img{
@@ -47,6 +49,16 @@
     all: unset;
 }
 
+.bike-attr{
+    font-weight: 600;
+}
+
+.price{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
 .disabled{
     pointer-events: none;
     opacity: 0.6; 
@@ -64,9 +76,20 @@
     min-width:13%;
     font-size:16px;
     font-weight:600;
-    padding:8px;
-    border-radius: 1rem;
+    min-height: 2rem;
+    padding:1rem;
+    border: transparent;
+    border-radius: 2rem;
     margin-left:.5rem;
+    background-color: var(--default-black);
+    transition: background-color 0.3s, border-color 0.3s;
+    border: solid .1rem var(--default-border-purple)
+
+}
+
+.bike-btn-holder > button:hover{
+    background-color: #a9aabc;
+    color: var(--default-black);
 }
 
 #page-changer{
