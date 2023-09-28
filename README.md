@@ -1,4 +1,5 @@
 # Norcal Cycles Website
+(Live Sample Website)[http://maxfongdev.com/norcal-cycles-web-page/#]
 
 ## Setup
 
@@ -11,7 +12,10 @@ npm start   #to start the app in developement mode
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run build`
+
+```bash
+npm run build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -25,7 +29,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### Expected JSON format
 
 ```js
-Expected JSON format:
+// Expected JSON format:
 {
   "make": "Honda",
   "model": "Rebel",
@@ -41,7 +45,5 @@ Expected JSON format:
   "comments": "Great bike for beginners",
   "year": 2022
 },
-
-
 
 ```
