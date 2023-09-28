@@ -3,6 +3,7 @@ import { NavLink, useParams } from 'react-router-dom'
 import ShowGallery from './ShowGallery'
 import { testBikes } from '../../testBikes/testBikes'
 import makeBikeName from '../../utils/makeBikeName'
+import {LeftArrow } from '../svg/LeftArrow'
 
 const BikeShow = () => {
   const params = useParams()
@@ -12,7 +13,7 @@ const BikeShow = () => {
   return (
     <>
       <button className='btn-defaults show-btn cursor-events'>
-        <NavLink to='/bikes'>Return to search</NavLink>
+            <NavLink to='/bikes'> Return to search</NavLink>
 
       </button>
       <h1>{makeBikeName(bike)}</h1>

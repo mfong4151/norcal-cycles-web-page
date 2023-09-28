@@ -40,6 +40,7 @@
     max-height:50vh;
     max-width:100%;
     display: flex;
+    position: relative;
 }
 
 #show-gallery > img {
@@ -48,9 +49,10 @@
 }
 
 .show-gallery-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 4 columns */
-    gap: .2rem; /* Gap between grid items */
+
+    display: flex;
+    flex-wrap: wrap;
+    padding:0
 }
 
 .show-gallery-grid > img{
@@ -69,13 +71,15 @@
     .show-gallery-grid{
         overflow-y: auto;
         overflow-x: hidden;
-        grid-template-columns: repeat(2, 1fr); /* 4 columns */
         margin-left:1rem;
         gap: .5rem;
         width:30%;
         
     }
-
+    .show-gallery-grid > img{
+        width:45%;
+        
+    }
 
 }
 
@@ -97,12 +101,14 @@
         min-width:100%;
     }
 
+    .show-gallery-grid > img{
+        width:23%;
+
+    }
+
 }
 
-.show-gallery-grid > img{
-    width:100%;
 
-}
 
 #bike-info{
     margin-bottom: 1.5rem;
@@ -128,4 +134,14 @@
 
 #bike-info span{
     font-weight: 600;
+}
+
+#pause-play{
+    position: absolute;
+    bottom: 2rem;
+    right:1rem;
+    height:5rem;
+    width:5rem;
+    border-radius: 3rem;
+    border: transparent
 }
