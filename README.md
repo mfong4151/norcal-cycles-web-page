@@ -24,7 +24,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Expected JSON format
 
-```json
+```js
 Expected JSON format:
 {
   "make": "Honda",
