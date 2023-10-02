@@ -20,8 +20,6 @@
 
 
 
-
-
 body {
   margin: 0;
   font-family:var(--font-family-fb);
@@ -130,6 +128,17 @@ p,
   background-color: var(--default-black);
 }
 
+#plain-txt-page{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#plain-txt-page > section{
+  width:50%
+}
+
+
+
 .btn-defaults {
   background-color: black;
   color: white;
@@ -162,9 +171,6 @@ ul > li > *{
 }
 
 
-
-
-
 @media screen and (max-width: 600px) {
   .padding-default{
     padding-top:1rem;
@@ -175,7 +181,14 @@ ul > li > *{
 
   #page-main{
     width: 100vw;
-
   }
 
+  #plain-txt-page{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #plain-txt-page > section{
+    padding-block:1rem;
+  }
 }

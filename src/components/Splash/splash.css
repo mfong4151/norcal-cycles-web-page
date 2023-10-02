@@ -4,5 +4,5 @@
 
 #gallery-holder{
     min-width: inherit;
-    min-height: inherit;
+    height: 60vh;
 }

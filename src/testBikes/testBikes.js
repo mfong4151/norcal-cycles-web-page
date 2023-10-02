@@ -10,22 +10,22 @@ import bike9 from './photos/bike9.jpg'
 import bike10 from './photos/bike10.jpg'
 
 
-Expected JSON format:
-{
-  "make": "Honda",
-  "model": "Rebel",
-  "transmission": "Manual",
-  "engine": "V-Twin",
-  "id": 1,
-  "miles": 1000,
-  "price": 8000,
-  "images": [bike1, bike2, bike3, bike4, bike5, bike6, bike7],
-  "color": "Red",
-  "vin": "123456789",
-  "bodyStyle": "Cruiser",
-  "comments": "Great bike for beginners",
-  "year": 2022
-},
+
+// {
+//   "make": "Honda",
+//   "model": "Rebel",
+//   "transmission": "Manual",
+//   "engine": "V-Twin",
+//   "id": 1,
+//   "miles": 1000,
+//   "price": 8000,
+//   "images": [bike1, bike2, bike3, bike4, bike5, bike6, bike7],
+//   "color": "Red",
+//   "vin": "123456789",
+//   "bodyStyle": "Cruiser",
+//   "comments": "Great bike for beginners",
+//   "year": 2022
+// },
 
 
 export const testBikes = {

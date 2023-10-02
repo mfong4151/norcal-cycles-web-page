@@ -6,6 +6,8 @@ const index = () => {
 
   return (
     <>
+      <section>
+
         <h1>About Nor-Cal Cycles:</h1>
         <p>The One-Stop Motorcycle Dealer serving the San Francisco Bay Area & Beyond.</p>
 
@@ -24,6 +26,10 @@ const index = () => {
             <p>Financing is available through our many lenders O.A.C.</p>
             <p>We stock thousands of new & used parts see our store <a href='https://www.ebay.com/str/norcalcycles' target='_blank'>here</a></p>
             <p>Don't see it on our site? contact us!</p>
+      </section>
+      <section>
+        <img src="" alt="" />
+      </section>
     </>
   );
 };

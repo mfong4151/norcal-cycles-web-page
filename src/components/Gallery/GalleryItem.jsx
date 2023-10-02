@@ -8,13 +8,13 @@ const GalleryItem = ({id, imageObj}) => {
     
     return (
         <>
-        {imageObj.aLink ? <a href={`${imageObj.aLink}`} className='udc'>
+        {imageObj.aLink 
+            ? <a href={`${imageObj.aLink}`} className='udc'>
                 <Image id={id} itemRef={itemRef} imageObj={imageObj}/>
-            </a> 
-            : 
-            <Link  className='udc'>
+              </a> 
+            : <Link  className='udc'>
                 <Image id={id} itemRef={itemRef} imageObj={imageObj}/>
-            </Link> 
+              </Link> 
             }
         </>
     );
@@ -41,7 +41,7 @@ const Image = ({id, itemRef, imageObj}) => {
         className='gallery-img' 
         ref={itemRef}
         src={imageObj.img} 
-/>
+    />
   );
 };
 

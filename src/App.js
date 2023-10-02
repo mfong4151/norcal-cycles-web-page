@@ -18,30 +18,27 @@ const App = () => {
   const headerRef = useRef(null)
 
   return (
-      <HashRouter>
-        <Header headerRef={headerRef} />
-        <NavBar/>
-        <div id='page-main-bound' className='udc'>
-
-
+    <HashRouter>
+      <Header headerRef={headerRef} />
+      <NavBar />
+      <div id='page-main-bound' className='udc'>
         <article id="page-main" className='padding-default'>
           <Routes>
-              <Route path="/" exact element={<Splash/>} />
-              <Route path='/about-us' element={<AboutUs/>}/>
-              <Route path="/contact-us" element={<ContactUs/>} />
-              <Route path='/bike/:id' element={<BikeShow/>}/>
-              <Route path="/bikes" element={<Bikes/>} />
-              <Route path="/rentals" element={<Rentals/>} />
-              <Route path='/financing' element={<Financing/>}/>
-              <Route path="/service" element={<Service/>} />
-              <Route path="/parts" element={<Parts/>} />
-              <Route path="*" element={<Splash/>} />
+            <Route path="/" exact element={<Splash />} />
+            <Route path='/about-us' element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path='/bike/:id' element={<BikeShow />} />
+            <Route path="/rentals" element={<Rentals />} />
+            <Route path='/financing' element={<Financing />} />
+            <Route path="/service" element={<Service />} />
+            <Route path="/parts" element={<Parts />} />
+            <Route path="*" element={<Splash />} />
+            <Route path="/bikes" element={<Bikes />} />
           </Routes>
         </article>
-
-        </div>
-        <Footer headerRef={headerRef}/>
-      </HashRouter>
+      </div>
+      <Footer headerRef={headerRef} />
+    </HashRouter>
   );
 };
 
