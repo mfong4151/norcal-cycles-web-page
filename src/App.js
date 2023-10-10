@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
@@ -17,19 +17,9 @@ import { parseTxt } from './utils/parseTxt';
 
 const App = () => {
   const headerRef = useRef(null)
-  const [bikes, setBikes] = useState({});
-    
-    useEffect(() => {
-        async function loadBikes() {
-            const bikeData = await parseTxt();
-          
-            setBikes(bikeData);
-        }
-
-        loadBikes();
-    }, []);
+  const [bikes, setBikes] = useState([]);
   
-    console.log(bikes)
+ 
   return (
     <HashRouter>
       <Header headerRef={headerRef} />
@@ -46,7 +36,7 @@ const App = () => {
             <Route path="/service" element={<Service />} />
             <Route path="/parts" element={<Parts />} />
             <Route path="*" element={<Splash />} />
-            <Route path="/bikes" element={<Bikes bikes={bikes} />} />
+            <Route path="/bikes" element={<Bikes allBikes={bikes} />} />
           </Routes>
         </article>
       </div>

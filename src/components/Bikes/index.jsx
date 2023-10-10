@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useRef, useEffect} from 'react'
 import BikeGrid from './BikeGrid'
 import Search from '../Search'
 import { createContext } from "react";
 import { testBikes } from '../../testBikes/testBikes'
+import { parseTxt } from '../../utils/parseTxt';
 export const BikeContext = createContext();
 
 //need to tel lthem how to receive it
@@ -13,14 +14,13 @@ export const BikeContext = createContext();
 
 // sales@dcsonline.com
 
-const Bikes = () => {
+const Bikes = ({allBikes}) => {
   //Temporary bikes solution
 
-  const allBikes = Object.values(testBikes);
-
+  
   const bikeGridRef = useRef()
   const [bikes, setBikes] = useState(allBikes);
-
+  
   const [make, setMake] = useState('');
   const [model, setModel] = useState('');
   const [trans, setTrans] = useState('');
@@ -28,6 +28,18 @@ const Bikes = () => {
   const [yearEnd, setYearEnd] = useState(0);
   const [priceStart, setPriceStart] = useState(0);
   const [priceEnd, setPriceEnd] = useState(0);
+
+
+  useEffect(() => {
+    async function loadBikes() {
+        const bikeData = await parseTxt();
+      
+        setBikes(bikeData);
+    }
+
+    loadBikes();
+}, []);
+
 
   const bikeStates = {
 

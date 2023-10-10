@@ -1,6 +1,6 @@
 
 const makeBikeName = (bike)=>(
-    `${bike.year} ${bike.make} ${bike.model}`
+    `${bike.modelyear} ${bike.make} ${bike.model}`
 )
 
 export default makeBikeName

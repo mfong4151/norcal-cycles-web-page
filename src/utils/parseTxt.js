@@ -20,15 +20,16 @@ export const parseTxt =   async() =>  {
             
             // If the line is not empty, process it
             headers.forEach((header, index) => {
-                if (header === 'Image' && values[index]) {
+                const item =  values[index]?.trim().replace(/"/g, '').trim()
+                if (header === 'image' && values[index]) {
                     // Split the comma-separated string of photo URLs into an array
-                    obj[header] = values[index]?.trim().replace(/"/g, '').trim().split(',');
+                    obj[header] = item?.split(',');
                 } else {
-                    obj[header] = values[index]?.replace(/"/g, '').trim();
+                    obj[header] = item?.trim();
                 }
             });
 
-            obj['id'] = i
+            obj['id'] = i - 1
             jsonArray.push(obj);
 
         }

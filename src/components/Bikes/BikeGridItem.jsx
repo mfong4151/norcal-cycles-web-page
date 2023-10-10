@@ -6,6 +6,7 @@ import { RightArrow } from '../svg/RightArrow';
 
 
 const BikeGridItem = ({bike}) => {
+
   const navigate = useNavigate();
   const bikeName = makeBikeName(bike)
   const handleOnClick = (e) => {
@@ -16,7 +17,7 @@ const BikeGridItem = ({bike}) => {
   
   return (
     <div className='bike cursor-events fdc' onClick={handleOnClick}>
-        <img src={bike.images[0]} alt=""/>
+        <img src={bike.image[0]} alt=""/>
         <div className='name-holder udc'>
           <h4 className="bike-name">{bikeName}</h4>
 
@@ -25,8 +26,8 @@ const BikeGridItem = ({bike}) => {
          <li ><span className='price'>{`$${bike.price}`}</span><span>00</span></li>
           <li><span className='bike-attr'>Transmission: </span> {bike.transmission}</li>
           <li><span className='bike-attr'>Engine: </span>{bike.engine}</li>
-          <li><span className='bike-attr'>Stock No: </span>{bike.id}</li>
-          <li><span className='bike-attr'>Miles: </span>{bike.miles}</li>
+          <li><span className='bike-attr'>Stock No: </span>{bike.stocknumber}</li>
+          <li><span className='bike-attr'>Miles: </span>{bike.mileage}</li>
         </ul>
         <div className='bike-btn-holder udc-left'>
           <button className='btn-defaults cursor-events se'>
