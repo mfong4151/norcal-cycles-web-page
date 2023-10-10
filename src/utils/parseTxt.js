@@ -10,26 +10,29 @@ export const parseTxt =   async() =>  {
         
         const data = await response.text();
         const lines = data.split('\n').filter(Boolean); // filter out any empty lines
-        const headers = lines[0].split('|');
+        const headers = lines[0].split('|').map(h => h.toLowerCase());
         const jsonArray = [];
 
         for(let i=1; i<lines.length; i++) {
             const values = lines[i].split('|');
             const obj = {};
 
+            
             // If the line is not empty, process it
-            if(values.length === headers.length) {
-                headers.forEach((header, index) => {
-                    if (header === 'PhotoUrl' && values[index]) {
-                        // Split the comma-separated string of photo URLs into an array
-                        obj[header] = values[index].split(',');
-                    } else {
-                        obj[header] = values[index];
-                    }
-                });
-                jsonArray.push(obj);
-            }
+            headers.forEach((header, index) => {
+                if (header === 'Image' && values[index]) {
+                    // Split the comma-separated string of photo URLs into an array
+                    obj[header] = values[index]?.trim().replace(/"/g, '').trim().split(',');
+                } else {
+                    obj[header] = values[index]?.replace(/"/g, '').trim();
+                }
+            });
+
+            obj['id'] = i
+            jsonArray.push(obj);
+
         }
+        
 
         return jsonArray;
     } catch (err) {

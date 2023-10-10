@@ -8,7 +8,7 @@ import {LeftArrow } from '../svg/LeftArrow'
 const BikeShow = ({bikes}) => {
   const params = useParams()
   const id = params.id
-  const bike = testBikes[id]; //Temporary "Fetch simulation"
+  const bike = bikes[id]; //Temporary "Fetch simulation"
   
   return (
     <>

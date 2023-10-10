@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { HashRouter } from 'react-router-dom';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
@@ -22,18 +22,14 @@ const App = () => {
     useEffect(() => {
         async function loadBikes() {
             const bikeData = await parseTxt();
-            const bikeCache = {};
-            
-            bikeData.forEach(bike => {
-                // Assuming each bike has a unique ID, using DealerID for this example
-                bikeCache[bike.DealerID] = bike;
-            });
-
-            setBikes(bikeCache);
+          
+            setBikes(bikeData);
         }
 
         loadBikes();
     }, []);
+  
+    console.log(bikes)
   return (
     <HashRouter>
       <Header headerRef={headerRef} />
