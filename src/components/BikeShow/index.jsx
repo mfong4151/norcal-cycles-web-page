@@ -5,7 +5,7 @@ import { testBikes } from '../../testBikes/testBikes'
 import makeBikeName from '../../utils/makeBikeName'
 import {LeftArrow } from '../svg/LeftArrow'
 
-const BikeShow = () => {
+const BikeShow = ({bikes}) => {
   const params = useParams()
   const id = params.id
   const bike = testBikes[id]; //Temporary "Fetch simulation"

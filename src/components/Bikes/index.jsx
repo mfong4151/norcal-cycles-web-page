@@ -13,7 +13,6 @@ export const BikeContext = createContext();
 
 // sales@dcsonline.com
 
-//Probably will do a fetch for bikes here
 const Bikes = () => {
   //Temporary bikes solution
 
@@ -40,9 +39,6 @@ const Bikes = () => {
     priceStart, setPriceStart,
     priceEnd, setPriceEnd,
   };
-  useEffect(() => {
-    bikeGridRef.current.scrollIntoView({ behavior: 'smooth' })
-  }, [])
 
   return (
     <>

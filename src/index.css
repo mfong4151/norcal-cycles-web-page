@@ -123,9 +123,10 @@ p,
 
 #page-main{
   width: 70vw;
-  min-height: 70vh;
+  height: 70vh;
   padding-bottom: 1rem;
   background-color: var(--default-black);
+  overflow-y: auto;
 }
 
 #plain-txt-page{
@@ -135,6 +136,10 @@ p,
 
 #plain-txt-page > section{
   width:50%
+}
+
+#plain-txt-page :nth-child(1){
+  padding-right: 2rem;
 }
 
 
