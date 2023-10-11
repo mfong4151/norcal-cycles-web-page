@@ -120,12 +120,14 @@ p,
   background-image: url('./assets/bike-shop.jpg');
   background-size: cover;
   background-repeat: repeat-y;
+  background-position: center;
+  background-attachment: fixed;
   min-height:70vh;
 }
 
 #page-main{
   width: 70vw;
-  min-height: 75vh;
+  min-height:75vh;
   padding-bottom: 1rem;
   background-color: var(--default-black);
 }

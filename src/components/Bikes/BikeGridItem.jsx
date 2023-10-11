@@ -14,10 +14,10 @@ const BikeGridItem = ({bike}) => {
       e.stopPropagation()
       navigate(`/bike/${bike.id}`)
   }
-  
+  console.log(bike.images)
   return (
     <div className='bike cursor-events fdc' onClick={handleOnClick}>
-        <img src={bike.image[0]} alt=""/>
+        <img src={bike.images[0]} alt=""/>
         <div className='name-holder udc'>
           <h4 className="bike-name">{bikeName}</h4>
 

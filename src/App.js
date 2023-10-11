@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState, useLayoutEffect } from 'react';
-import { HashRouter } from 'react-router-dom';
+import React, { useRef, useState } from 'react'
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import Bikes from './components/Bikes';
@@ -21,10 +20,10 @@ const App = () => {
   
  
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Header headerRef={headerRef} />
       <NavBar />
-      <div id='page-main-bound' className='udc'>
+      <body id='page-main-bound' className='udc'>
         <article id="page-main" className='padding-default'>
           <Routes>
             <Route path="/" exact element={<Splash />} />
@@ -39,9 +38,9 @@ const App = () => {
             <Route path="/bikes" element={<Bikes allBikes={bikes} />} />
           </Routes>
         </article>
-      </div>
+      </body>
       <Footer headerRef={headerRef} />
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

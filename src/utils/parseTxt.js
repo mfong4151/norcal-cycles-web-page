@@ -21,7 +21,7 @@ export const parseTxt =   async() =>  {
             // If the line is not empty, process it
             headers.forEach((header, index) => {
                 const item =  values[index]?.trim().replace(/"/g, '').trim()
-                if (header === 'image' && values[index]) {
+                if (header === 'images' && values[index]) {
                     // Split the comma-separated string of photo URLs into an array
                     obj[header] = item?.split(',');
                 } else {

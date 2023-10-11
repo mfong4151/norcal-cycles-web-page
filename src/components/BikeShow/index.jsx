@@ -31,7 +31,7 @@ const BikeShow = () => {
 
         </button>
         <h1>{makeBikeName(bike)}</h1>
-        <ShowGallery id={id} imgs={bike?.image}/>
+        <ShowGallery id={id} imgs={bike.images}/>
         <div id='bike-info' >
           <h3>{`$${bike?.price}`}<span>.00</span></h3>
           <ul >
